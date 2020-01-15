@@ -71,7 +71,7 @@ def refl(values, contrasts, variables, logl=True):
             contrast.mol_vol_t.setp(850.4, vary=False)
         contrast.phi_h.constraint = (
             contrast.thick_t
-            * contrast.mol_vol_h
+            * contrast.mol_vol_h * contrast.phi_t 
             / (contrast.mol_vol_t * contrast.thick_h)
         )
         if "rough" in variables:

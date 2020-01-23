@@ -1,8 +1,15 @@
 """
-Model 3 of the Campbell models
+Calculate the reflectometry with respect to a set of contrast from the
+two_layer model.
 
-author: Andrew McCluskey (andrew.mccluskey@diamond.ac.uk)
+Copyright (c) Andrew R. McCluskey
+
+Distributed under the terms of the MIT License
+
+author: Andrew R. McCluskey (andrew.mccluskey@diamond.ac.uk)
 """
+
+# pylint: disable=R0912
 
 from refnx.dataset import ReflectDataset
 import toolbox
@@ -14,26 +21,22 @@ DATA_DIR = "data"
 
 def refl(values, contrasts, variables, logl=True):
     """
-    Evalutate the reflectometry from model 3
+    Evalutate the reflectometry from two-layer phospholipid monolayer model.
 
-    Parameters
-    ----------
-    t_t : float
-        Lipid tail thickness
-    contrast : list
-        Contrasts to be analysed
-    logl: bool
-        Should the logl likelihood be return, else the global objective is
-        returned
+    Args:
+        values (array_like): An array of values for the parameters that are
+            being varied.
+        contrasts (list): A list of strings describing the contrasts being
+            investigated.
+        variables (dict): A dict describing the parameters to be varied and
+            the index of this parameter in the values array.
+        logl (bool, optional): Return just the logl value (if `True`) or the
+            whole refnx.analysis.GlobalObjective object (if `False`).
 
-    Returns
-    -------
-    if logl:
-        logl : float
-            Log-likelihood for the value of phi
-    else:
-        global_objective : refnx.analysis.GlobalObjective
-            GlobalObjective for system
+    Returns:
+        (float or refnx.analysis.GlobalObjective) Depending on the value of
+            `logl`, either the logl of the input or the whole
+            GlobalObjective is returned.
     """
     datasets = []
     num_contrasts = len(contrasts)
@@ -49,7 +52,7 @@ def refl(values, contrasts, variables, logl=True):
     structures = toolbox.get_structures(contrasts, lipids)
 
     for i, contrast in enumerate(lipids):
-        if "th" in variables:   
+        if "th" in variables:
             contrast.thick_h.setp(values[variables["th"]], vary=False)
         else:
             contrast.thick_h.setp(10.0, vary=False)
@@ -57,7 +60,7 @@ def refl(values, contrasts, variables, logl=True):
             contrast.mol_vol_h.setp(values[variables["mvh"]], vary=False)
         else:
             contrast.mol_vol_h.setp(339.5, vary=False)
-        if "tt" in variables:   
+        if "tt" in variables:
             contrast.thick_t.setp(values[variables["tt"]], vary=False)
         else:
             contrast.thick_t.setp(21, vary=False)
@@ -65,17 +68,20 @@ def refl(values, contrasts, variables, logl=True):
             contrast.phi_t.setp(values[variables["phit"]], vary=False)
         else:
             contrast.phi_t.setp(1.0, vary=False)
-        if "mvt" in variables: 
+        if "mvt" in variables:
             contrast.mol_vol_t.setp(values[variables["mvt"]], vary=False)
         else:
             contrast.mol_vol_t.setp(850.4, vary=False)
         contrast.phi_h.constraint = (
             contrast.thick_t
-            * contrast.mol_vol_h * contrast.phi_t 
+            * contrast.mol_vol_h * contrast.phi_t
             / (contrast.mol_vol_t * contrast.thick_h)
         )
         if "rough" in variables:
-            structures[i][-1].rough.setp(values[variables["rough"]], vary=False)
+            structures[i][-1].rough.setp(
+                values[variables["rough"]],
+                vary=False,
+            )
         else:
             structures[i][-1].rough.setp(2.9, vary=False)
         lipids[i].rough_t_a.constraint = structures[i][-1].rough

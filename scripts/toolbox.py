@@ -1,8 +1,13 @@
 """
-Toolbox of functions for bayes_mod
+Toolbox of functions for model_select
 
-author: Andrew McCluskey (andrew.mccluskey@diamond.ac.uk)
+Copyright (c) Andrew R. McCluskey
+
+Distributed under the terms of the MIT License
+
+@author: Andrew R. McCluskey
 """
+
 
 import periodictable as pt
 import numpy as np

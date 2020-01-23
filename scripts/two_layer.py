@@ -1,14 +1,19 @@
 """
-OneLayer class
+Two layers description of phospholipid monolayer.
 
-author: Andrew McCluskey (andrew.mccluskey@diamond.ac.uk)
+Copyright (c) Andrew R. McCluskey
+
+Distributed under the terms of the MIT License
+
+@author: Andrew R. McCluskey
 """
+
+# pylint: disable=R0902
+
 import numpy as np
 from refnx.analysis import possibly_create_parameter, Parameters
 from refnx.reflect import Component
 import toolbox
-
-# pylint: disable=R0902
 
 
 def get_b_lipid(contrasts):
@@ -172,6 +177,12 @@ class TwoLayer(Component):
 
     @property
     def parameters(self):
+        """
+        Parameters for the model.
+
+        Returns:
+            (refnx.analysis.Parameters) Model parameters.
+        """
         para = Parameters(name=self.name)
         para.extend(
             [

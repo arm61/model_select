@@ -80,5 +80,5 @@ rule analysis_simulated:
     output:
         ['output/simulated^{b}.h5'],
     run:
-        shell("echo scripts/analysis.py {wildcards.b}")
-        shell("python scripts/analysis.py {wildcards.b}")
+        shell("echo scripts/simulated.py {wildcards.b}")
+        shell("python scripts/simulated.py {wildcards.b}")

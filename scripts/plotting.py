@@ -196,7 +196,7 @@ class Plotting:
         axes.set_xticks(range(len(self.logz)))
         axes.set_xticklabels(self.latex_p)
         axes.set_xlim((-1, len(self.logz)))
-        axes.set_xticks(rotation=90)
+        axes.xticks(rotation=90)
         axes.set_ylim(
             (
                 self.logz[self.logz != 0].min()-500,

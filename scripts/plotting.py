@@ -226,7 +226,7 @@ class Plotting:
         axes.plot(range(0, 6), best_z, 'o-')
         axes.set_xticks(range(0, 6))
         axes.set_xticklabels(best_z_labels)
-        axes.set_xticks(rotation=90)
+        plt.xticks(rotation=90)
         axes.set_xlabel(r'Free Parameters')
         axes.set_ylabel(r'$\ln\{p(\mathbf{D}|H)\}$')
         axes.set_ylim(6.8e3, 6.88e3)

@@ -352,3 +352,15 @@ class Plotting:
                 ) + r'}_{' + r'-{:.2f}'.format(percentiles[i, 0]) + r'}$',
             )
             file_latex.close()
+
+plotter = Plotting()
+plotter.generate_permutations()
+plotter.read_all_logz()
+plotter.write_latex_logz()
+plotter.write_latex_logz_table()
+plotter.plot_logz()
+plotter.plot_best_per_number()
+plotter.plot_correlation_best()
+plotter.plot_for_all()
+plotter.plot_refl_best()
+plotter.write_latex_percentiles()

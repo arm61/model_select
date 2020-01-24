@@ -111,7 +111,7 @@ class Plotting:
         """
         Write evidence and uncertainty to files.
         """
-        for i in self.logz:
+        for i in range(len(self.logz)):
             file_latex = open(
                 'results/{}_ev.txt'.format(self.variables_p[i]),
                 'w',

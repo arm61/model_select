@@ -17,8 +17,17 @@ import h5py
 import matplotlib.pyplot as plt
 from dynesty import plotting, utils
 from uncertainties import ufloat
-from analysis import CON_LIST
 import fig_params
+
+CON_LIST = [
+    "d13acmw",
+    "d13d2o",
+    "hd2o",
+    "d70acmw",
+    "d70d2o",
+    "d83acmw",
+    "d83d2o",
+]
 
 
 sys.path.append('scripts/')

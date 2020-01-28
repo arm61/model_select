@@ -35,7 +35,7 @@ class SimulatedData:
         layer_1 = SLD(2., 'layer_1')
         layer_2 = SLD(4., 'layer_2')
 
-        self.model = air(0, 0) | layer_1(5, 0) | layer_2(5, 0) | water(0, 0)
+        self.model = air(0, 0) | layer_1(25, 0) | layer_2(25, 0) | water(0, 0)
 
     def get_refl(self, uncertainty_mod=1e-13):
         """
@@ -244,7 +244,7 @@ def ptform_one(uniform):
     """
     priors = []
     priors.append(6.35 * uniform[0])
-    priors.append(10 * uniform[1])
+    priors.append(50 * uniform[1])
     return priors
 
 
@@ -262,8 +262,8 @@ def ptform_two(uniform):
     priors = []
     priors.append(6.35 * uniform[0])
     priors.append(6.35 * uniform[1])
-    priors.append(10 * uniform[2])
-    priors.append(10 * uniform[3])
+    priors.append(50 * uniform[2])
+    priors.append(50 * uniform[3])
     return priors
 
 
@@ -282,9 +282,9 @@ def ptform_three(uniform):
     priors.append(6.35 * uniform[0])
     priors.append(6.35 * uniform[1])
     priors.append(6.35 * uniform[2])
-    priors.append(10 * uniform[3])
-    priors.append(10 * uniform[4])
-    priors.append(10 * uniform[5])
+    priors.append(50 * uniform[3])
+    priors.append(50 * uniform[4])
+    priors.append(50 * uniform[5])
     return priors
 
 
@@ -304,10 +304,10 @@ def ptform_four(uniform):
     priors.append(6.35 * uniform[1])
     priors.append(6.35 * uniform[2])
     priors.append(6.35 * uniform[3])
-    priors.append(10 * uniform[4])
-    priors.append(10 * uniform[5])
-    priors.append(10 * uniform[6])
-    priors.append(10 * uniform[7])
+    priors.append(50 * uniform[4])
+    priors.append(50 * uniform[5])
+    priors.append(50 * uniform[6])
+    priors.append(50 * uniform[7])
     return priors
 
 

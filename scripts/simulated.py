@@ -300,14 +300,14 @@ def ptform_four(uniform):
         prior (list): Prior probability for each of the varying parameters.
     """
     priors = []
-    priors.append(6.35 * uniform[0])
-    priors.append(6.35 * uniform[1])
-    priors.append(6.35 * uniform[2])
-    priors.append(6.35 * uniform[3])
-    priors.append(50 * uniform[4])
-    priors.append(50 * uniform[5])
-    priors.append(50 * uniform[6])
-    priors.append(50 * uniform[7])
+    priors.append(1 + (6.35 - 1) * uniform[0])
+    priors.append(1 + (6.35 - 1) * uniform[1])
+    priors.append(1 + (6.35 - 1) * uniform[2])
+    priors.append(1 + (6.35 - 1) * uniform[3])
+    priors.append(10 + (50 - 10) * uniform[4])
+    priors.append(10 + (50 - 10) * uniform[5])
+    priors.append(10 + (50 - 10) * uniform[6])
+    priors.append(10 + (50 - 10) * uniform[7])
     return priors
 
 

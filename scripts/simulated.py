@@ -244,8 +244,8 @@ def ptform_one(uniform):
         prior (list): Prior probability for each of the varying parameters.
     """
     priors = []
-    priors.append(6.35 * uniform[0])
-    priors.append(50 * uniform[1])
+    priors.append(1 + (6.35 - 1) * uniform[0])
+    priors.append(10 + (50 - 10) * uniform[1])
     return priors
 
 
@@ -261,10 +261,10 @@ def ptform_two(uniform):
         prior (list): Prior probability for each of the varying parameters.
     """
     priors = []
-    priors.append(6.35 * uniform[0])
-    priors.append(6.35 * uniform[1])
-    priors.append(50 * uniform[2])
-    priors.append(50 * uniform[3])
+    priors.append(1 + (6.35 - 1) * uniform[0])
+    priors.append(1 + (6.35 - 1) * uniform[1])
+    priors.append(10 + (50 - 10) * uniform[2])
+    priors.append(10 + (50 - 10) * uniform[3])
     return priors
 
 
@@ -280,12 +280,12 @@ def ptform_three(uniform):
         prior (list): Prior probability for each of the varying parameters.
     """
     priors = []
-    priors.append(6.35 * uniform[0])
-    priors.append(6.35 * uniform[1])
-    priors.append(6.35 * uniform[2])
-    priors.append(50 * uniform[3])
-    priors.append(50 * uniform[4])
-    priors.append(50 * uniform[5])
+    priors.append(1 + (6.35 - 1) * uniform[0])
+    priors.append(1 + (6.35 - 1) * uniform[1])
+    priors.append(1 + (6.35 - 1) * uniform[2])
+    priors.append(10 + (50 - 10) * uniform[3])
+    priors.append(10 + (50 - 10) * uniform[4])
+    priors.append(10 + (50 - 10) * uniform[5])
     return priors
 
 

@@ -17,6 +17,7 @@ import dynesty
 from refnx.reflect import ReflectModel, SLD
 from refnx.dataset import Data1D
 from refnx.analysis import Transform, Objective
+from multiprocessing import Pool, cpu_count
 
 np.random.seed(1)
 
@@ -332,11 +333,11 @@ def main(n_layers):
         ptform = ptform_four
     else:
         raise NotImplementedError("Max number of layers is 4")
-
-    sampler = dynesty.NestedSampler(
-        analysis, ptform, ndim, logl_args=[n_layers],
+    p = Pool(cpu_count())
+    sampler = dynesty.DynamicNestedSampler(
+        analysis, ptform, ndim, logl_args=[n_layers], pool=p, queue_size=cpu_count(),
     )
-    sampler.run_nested(dlogz=0.5, print_progress=True)
+    sampler.run_nested(print_progress=True, wt_kwargs={'pfrac': 0.0}, stop_kwargs={'pfrac': 0.0})
     res = sampler.results
     print(res)
 

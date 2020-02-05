@@ -334,6 +334,7 @@ def main(n_layers):
     else:
         raise NotImplementedError("Max number of layers is 4")
     p = Pool(cpu_count())
+    print("CPUS", cpu_count())
     sampler = dynesty.DynamicNestedSampler(
         analysis, ptform, ndim, logl_args=[n_layers], pool=p, queue_size=cpu_count(),
     )

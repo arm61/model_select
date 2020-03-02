@@ -28,7 +28,9 @@ Requirements:
 - anaconda or miniconda python
 - [REVTeX](https://journals.aps.org/revtex)
 
-The supplied Snakefile, will reproduce all of the analysis, plot the figures, and build a preprint version of the paper (`paper/paper.pdf`) when run. Be aware that the analyses within this work are non-trivial and take many hours to run so **use caution** before re-running.
+The supplied Snakefile, will reproduce all of the analysis, and plot the figures.
+<!---, and build a preprint version of the paper (`paper/paper.pdf`) when run. --->
+Be aware that the analyses within this work are non-trivial and take many hours to run so **use caution** before re-running.
 
 To re-run all analysis, simply run the following commands:
 
@@ -42,11 +44,11 @@ snakemake clear # this will remove all of the output from previous runs
 snakemake
 ```
 
-## [Figures](./paper/figures)
+<!---## [Figures](./paper/figures)
 
-PDF versions of the figures, can be found in the `paper/figures` directory.
+PDF versions of the figures, can be found in the `paper/figures` directory.--->
 
 ## Acknowledgements
 
-A.R.M. would like to acknowledge David J. Barlow and M. Jayne Lawrence for kindly sharing the neutron reflectometry data used, and Simon Titmuss for suggesting the use of the \texttt{dynesty} package.
+A.R.M. would like to acknowledge David J. Barlow and M. Jayne Lawrence for kindly sharing the neutron reflectometry data used, and Simon Titmuss for suggesting the use of the `dynesty` package.
 This work is supported by the Ada Lovelace Centre – a joint initiative between the Science and Technology Facilities Council (as part of UK Research and Innovation), Diamond Light Source, and the UK Atomic Energy Authority.

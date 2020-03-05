@@ -17,47 +17,66 @@ for i in range(len(variables)):
 
 rule targets:
     input:
-        'figures/evidence.pdf',
-        'figures/refl.pdf',
-        'figures/iterations.pdf',
-        'figures/post_all.pdf',
-        'figures/post_best.pdf',
-        'figures/best_per.pdf',
-        ['results/{}_ev.txt'.format(i) for i in VARIABLES],
-        'results/ev_table.txt',
-        'results/best_ev.txt',
-        'results/next_best_ev.txt',
-        'results/best_label.txt',
-        'results/next_best_label.txt',
-        'results/diff_ev.txt',
-        'results/d_h_range.txt',
-        'results/V_h_range.txt',
-        'results/d_t_range.txt',
-        'results/V_t_range.txt',
-        ['output/simulated^{}.h5'.format(i) for i in range(1, 5)]
+        'paper/paper.pdf',
+        'paper/si.pdf'
+
+rule make_si:
+    input:
+        'paper/si.tex',
+        'paper/ev_table.txt'
+    output:
+        'paper/si.pdf'
+    run:
+        shell("cd paper && pdflatex si.tex && pdflatex si.tex && cd ../")
+
+rule make_paper:
+    input:
+        'paper/evidence.pdf',
+        'paper/refl.pdf',
+        'paper/iterations.pdf',
+        'paper/post_all.pdf',
+        'paper/post_best.pdf',
+        'paper/best_per.pdf',
+        ['paper/{}_ev.txt'.format(i) for i in VARIABLES],
+        'paper/ev_table.txt',
+        'paper/best_ev.txt',
+        'paper/next_best_ev.txt',
+        'paper/best_label.txt',
+        'paper/next_best_label.txt',
+        'paper/diff_ev.txt',
+        'paper/d_h_range.txt',
+        'paper/V_h_range.txt',
+        'paper/d_t_range.txt',
+        'paper/V_t_range.txt',
+        'paper/paper.tex',
+        'paper/paper.bib',
+    output:
+        'paper/paper.pdf'
+    run:
+        shell("cd paper && pdflatex paper.tex && bibtex paper.aux && pdflatex paper.tex && pdflatex paper.tex && cd ../")
 
 rule evidence_plot:
     input:
         ['output/model^{}.h5'.format(i) for i in VARIABLES],
         'scripts/plotting.py'
     output:
-        'figures/evidence.pdf',
-        'figures/refl.pdf',
-        'figures/iterations.pdf',
-        'figures/post_all.pdf',
-        'figures/post_best.pdf',
-        'figures/best_per.pdf',
-        ['results/{}_ev.txt'.format(i) for i in VARIABLES],
-        'results/ev_table.txt',
-        'results/best_ev.txt',
-        'results/next_best_ev.txt',
-        'results/best_label.txt',
-        'results/next_best_label.txt',
-        'results/diff_ev.txt',
-        'results/d_h_range.txt',
-        'results/V_h_range.txt',
-        'results/d_t_range.txt',
-        'results/V_t_range.txt'
+        'paper/evidence.pdf',
+        'paper/refl.pdf',
+        'paper/iterations.pdf',
+        'paper/post_all.pdf',
+        'paper/post_best.pdf',
+        'paper/best_per.pdf',
+        ['paper/{}_ev.txt'.format(i) for i in VARIABLES],
+        'paper/ev_table.txt',
+        'paper/best_ev.txt',
+        'paper/next_best_ev.txt',
+        'paper/best_label.txt',
+        'paper/next_best_label.txt',
+        'paper/diff_ev.txt',
+        'paper/d_h_range.txt',
+        'paper/V_h_range.txt',
+        'paper/d_t_range.txt',
+        'paper/V_t_range.txt'
     run:
         shell("echo scripts/plotting.py")
         shell("python scripts/plotting.py")
@@ -73,12 +92,3 @@ rule analysis_all:
     run:
         shell("echo scripts/analysis.py {wildcards.b}")
         shell("python scripts/analysis.py {wildcards.b}")
-
-rule analysis_simulated:
-    input:
-        'scripts/simulated.py',
-    output:
-        ['output/simulated^{b}.h5'],
-    run:
-        shell("echo scripts/simulated.py {wildcards.b}")
-        shell("python scripts/simulated.py {wildcards.b}")

@@ -1,0 +1,402 @@
+\documentclass[%
+ reprint,
+ superscriptaddress,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage[separate-uncertainty=true]{siunitx}
+\usepackage{mhchem}
+
+\begin{document}
+
+\preprint{APS/123-QED}
+
+\title{A general approach to maximise information density in neutron reflectometry analysis}
+
+\author{Andrew R. McCluskey}
+  \email{andrew.mccluskey@diamond.ac.uk}
+  \email{a.r.mccluskey@bath.ac.uk}
+  \affiliation{Diamond Light Source, Rutherford Appleton Laboratory, Harwell Science and Innovation Campus, Didcot, OX11 0DE, UK}
+  \affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
+
+\author{Joshaniel F. K. Cooper}
+  \affiliation{ISIS Pulsed Neutron and Muon Source, Science and Technology Facilities Council, Rutherford Appleton Laboratory, Harwell Science and Innovation Campus, Didcot, Oxfordshire, OX11 0QX, UK}
+ 
+\author{Tom Arnold}
+  \affiliation{European Spallation Source, SE-211 00 Lund, Sweden}
+  \affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
+  \affiliation{ISIS Pulsed Neutron and Muon Source, Science and Technology Facilities Council, Rutherford Appleton Laboratory, Harwell Science and Innovation Campus, Didcot, Oxfordshire, OX11 0QX, UK}
+
+\author{Tim Snow}
+  \affiliation{Diamond Light Source, Rutherford Appleton Laboratory, Harwell Science and Innovation Campus, Didcot, OX11 0DE, UK}
+  \affiliation{School of Chemistry, University of Bristol, Bristol, BS8 1TS, UK}
+
+\date{\today}
+
+\begin{abstract}
+Neutron and X-ray reflectometry are powerful techniques facilitating the study of the structure of interfacial materials.
+The analysis of these techniques is ill-posed in nature requiring the application of a model-dependent methods.
+This can lead to the over- and under- analysis of experimental data, when too many or too few parameters are allowed to vary in the model. 
+In this work, we outline a robust and generic framework for the determination of the set of free parameters that is capable of maximising the in-formation density of the model. 
+This framework involves the determination of the Bayesian evidence for each permutation of free parameters; and is applied to a simple phospholipid monolayer. 
+We believe this framework should become an important component in reflectometry data analysis, and hope others more regularly consider the relative evidence for their analytical models.
+\end{abstract}
+
+\maketitle
+
+\section{\label{intro} Introduction}
+
+Neutron and x-ray reflectometry methods offer an important insight into the structure of interfacial materials; such as surfactant systems \cite{mccluskey_bayesian_2019}, biological membranes \cite{clifton_self_2019}, and polymeric photovoltaics \cite{perez_determination_2019}. 
+However, the analysis of reflectometry data is a non-trivial task, due in part to the phase problem. 
+This is where a direct inversion of the reflectometry profile, to recover the scattering length density, $\rho(z)$ profile is not possible since the phase of the reflected radiation is lost \cite{majkrzak_exact_1995}.
+While there has been much work to retrieve the phase information from a reflectometry profile; from using reference layers \cite{majkrzak_exact_1995,haan_retrieval_1995,majkrzak_phase_2003}, polarized neutrons \cite{leeb_determination_1998}, a dwell time approach \cite{fiedeldey_proposal_1992}, and from the investigation of multiple contrasts \cite{majkrzak_exact_1998,majkrzak_first_2000,majkrzak_phase_2003,koutsioubas_model_2019}, these methods are non-trivial and often require a specific experimental setup. 
+
+Where it is not possible to retrieve the phases, a model-dependent analysis method can be used to determine the structure of the experimental system \cite{pedersen_analysis_1994,haan_genetic_1994,nelson_motofit_2006,lee_comparison_2007,gerelli_aurore_2016,gerelli_aurore_2016b,nelson_refnx_2019}.
+This is where a model, typically a series of contiguous layers, is created and the model reflectometry is determined using the Abel\`{e}s matrix formalism for stratified media \cite{abeles_propagation_1948} or Parratt recursive method \cite{parratt_surface_1954}.
+However, the use of model-dependent methods is ill-posed in nature, where the solution may not necessarily be unique \cite{klibanov_phaseless_1992,klibanov_use_1994}.
+This necessitates the integration of \emph{a priori} information about the underlying physics and chemistry of the experimental system, such as assumptions about molecular volume \cite{waldie_localization_2018,campbell_structure_2018,mccluskey_bayesian_2019}. 
+This is typically achieved through the re-parameterisation of the model, to describe the system in terms of physio-chemical descriptors from which a set of layers can be determined \cite{schalke_structural_2000,heinrich_zooming_2014,heinrich_deuteration_2016}. 
+The inclusion of this prior information acts to reduce the dimensionality of the optimisation space and therefore reduces the number of possible structures that would offer satisfactory agreement with the data. 
+
+The inclusion of prior information is often achieved by taking literature values from other techniques and applying them inflexibly to constrain values in the re-parameterised model, such as molecular volumes from computational simulation or solution scattering \cite{sun_order_1994,armen_phospholipid_1998}. 
+However, as was shown in the work of Campbell \emph{et al.} \cite{campbell_structure_2018} and McCluskey \emph{et al.} \cite{mccluskey_bayesian_2019}, these values are not always strictly representative when the physical or chemical environment is varied.
+This has lead to the use of Markov-chain Monte Carlo (MCMC) methods for the analysis of reflectometry data, resulting in the inclusion of these methods in many common reflectometry analysis packages \cite{hughes_rascal_2017,kienzle_ncnr_2017,nelson_refnx_2019}.
+The inclusion of these methods enables the prior probabilities for a series of variables to be outlined, which are considered in a Bayesian fashion during the sampling of the parameter space \cite{bayes_essay_1763,mccluskey_bayesian_2019}. 
+This allows for more rational inclusion of the prior information about the experimental system in the analysis, in addition to, the ability to obtain information about the sampled posterior probabilities that are allowed from the experimental data. 
+
+The ability to include ranges of values, in the form of uninformative uniform prior probabilities, or normally distributed priors centred on a literature value in the analysis of an experimental dataset is an important development. 
+However, ``with great power, there must also come -- great responsibility!'' \cite{lee_introducting_1962} and the ability to sample or fit all of the parameters in an experimental analysis can lead to a high risk of over-fitting \cite{mayer_drawing_2010}. 
+As a result, it is necessary to investigate methods to quantify the information that is available from a given experimental dataset and to enable the comparison of different analytical models; including the number of free parameters that may be considered. 
+A specific approach to this problem is outlined in early works from Sivia and co-workers \cite{sivia_analysis_1991,geoghegan_experimental_1996,sivia_bayesian_1998}, where a two-parameter model was compared with a three-parameter model; with the additional parameter being related to the scaling of the model reflectometry. 
+Sivia and co-workers assumed that the likelihood function for both of these model would have ``only one significant maximum'', allowing numerical simplifications to be performed and therefore the problem to be solved analytically. 
+This may not be possible for all models investigated by reflectometry, due again to the ill-posed nature of the analysis problem. 
+Therefore, in this work, we outline a general Bayesian framework for the comparison of different analytical models for the rationalisation of reflectometry data. 
+This method can allow the maximum information to be obtained from the analysis of a given dataset, without risking over-fitting.
+In the supplementary information for this paper, we provide detailed code showing how this framework may be applied to a problem leveraging exclusively open-source software packages. 
+
+\section{\label{methods} Methods}
+
+\subsection{\label{bayes_mod} Bayesian model selection framework}
+
+Bayesian model selection involves the comparison of the posterior probabilities $p(H|\mathbf{D})$ \footnote{In this work, a reduced notation has been used, where the background information parameter, $I$ is implied.}, for two models, $H_x$ and $H_y$, given some dataset, $\bm{D}$. 
+The posterior probability for a given model, $H$, can be determined from Bayes theorem \cite{bayes_essay_1763}, 
+%
+\begin{equation}
+    p(H|\bm{D}) = \frac{p(\bm{D}|H)p(H)}{p(\bm{D})},
+\end{equation}
+%
+where, $p(\bm{D}|H)$ is the evidence for the model given the data, $p(H)$ is the prior probability for the model and $p(\bm{D})$ is the probability associated with the measured data. 
+When comparing the models, concerning the same data, the following relationship can be applied \cite{pullen_bayesian_2014}, 
+%
+\begin{equation}
+    \frac{p(H_x|\bm{D})}{p(H_y|\bm{D})} = \frac{p(\bm{D}|H_x)}{p(\bm{D}|H_y)} \times \frac{p(H_x)}{p(H_y)},
+    \label{equ:ratio}
+\end{equation}
+%
+where, the probabilities associated with the data only cancel out, and the relative posterior probabilities depend only on the evidence and prior probabilities for each model. 
+Throughout this work, we have used the uninformative assumption that the prior probability for all models is \num{1}.
+Therefore, it is only the evidence for each model, for the given data, that influences the posterior probability. 
+
+Nested sampling is a method for Bayesian evidence determination that was developed by Skilling \cite{skilling_nested_2006} and is implemented in the Python package \texttt{dynesty} \cite{speagle_dynesty_2019}.
+This sampling method allows for the evidence determination through the estimation of the, possibly multi-dimensional, integral under the likelihood, $\mathcal{L}(\bm{X}|H)$, and parameter specific prior $p(\bm{X}|H)$ \cite{sivia_data_2005}, 
+%
+\begin{equation}
+    p(\mathbf{D}|H) = \iint_{\bm{R}}{\mathcal{L}(\bm{X}|H)p(\bm{X}|H)}\;\text{d}^M\bm{X},
+\end{equation}
+%
+where, $\bm{X}$ is a vector of length $M$ of the varying parameters in the model, $\bm{R}$ is a $2 \times M$ matrix that describes the range over which the integral should be evaluated and $p(\bm{X}|H)$ is the parameter specific prior. 
+Nested sampling involves ``intelligently'' sampling this integral until some stopping criterion is achieved.
+This stopping criterion is when the following is less than a given value,
+%
+\begin{equation}
+    \begin{aligned}
+        \Delta \ln\{\hat{p}(\bm{D}|H)_i\} = \ln\{\hat{p}(\bm{D}|H)_i - \Delta \hat{p}(\bm{D}|H)_i\} \\
+        - \ln \hat{p}(\bm{D}|H)_i, 
+    \end{aligned}
+\end{equation}
+where, $\hat{p}(\bm{D}|H)_i$ is the current estimated evidence and $\Delta \hat{p}(\bm{D}|H)_i$ can be estimated from the prior volume of the previous point in the sampling. 
+In this work, a stopping criteria of $\Delta \ln\{\hat{p}(\bm{D}|H)\} = 0.5$ was used. 
+
+The likelihood is the difference between the data and model, and is defined in this work as it is implemented in the \texttt{refnx} reflectometry package \cite{nelson_refnx_2019,refnx_0.1.7_2019},
+%
+\begin{equation}
+    \begin{aligned}
+        \ln\mathcal{L} = -\frac{1}{2}\sum_{i=1}^{N}\Bigg(\bigg\{\frac{R(q_i) - R(q_i)_m}{\delta R(q_i)}\bigg\}^2 \\ + \ln[2\pi\{\delta R(q_i)\}^2]\Bigg),
+    \end{aligned}
+\end{equation}
+where, $N$ is the number of measured $q$-vectors, $q_i$ is the $i$th $q$-vector, $R(q_i)$ is the experimental reflected intensity at the $i$th $q$-vector, $\delta R(q_i)$ is the uncertainty in the experimental reflected intensity at the $i$th $q$-vector, and $R(q_i)_m$ is the model reflected intensity at the $i$th $q$-vector determined from the implementation of the Abel\`{e}s matrix formalism for stratified media \cite{abeles_propagation_1948,parratt_surface_1954} in \texttt{refnx}.
+
+The evidence allows for the comparison of two models, where the data are the same.
+It is only possible to compare a given pair of models for the same data, as in Equation~\ref{equ:ratio} the data-only dependent probabilities were cancelled out as they were equal. 
+The Bayes factor, $B_{xy}$, is the name given to the ratio between the evidence for two models, 
+%
+\begin{equation}
+    \ln{B_{xy}} = \frac{\ln{p(\bm{D}|H_x)}}{\ln{p(\bm{D}|H_y)}}. 
+\end{equation}
+The interpretation of the Bayes factor was outlined by Kass and Raftery \cite{kass_bayes_1995}, which is given in Table~\ref{tab:kass}.
+%
+\begin{table}
+\caption{\label{tab:kass} Interpretation of the Bayes factor, $B_{xy}$ between models $x$ and $y$.}
+\begin{ruledtabular}
+\begin{tabular}{lr}
+\textrm{$2\ln{B_{xy}}$} & Evidence against $H_y$\\
+\colrule
+$[0, 2)$ & Not worth more than a bare mention \\
+$[2, 6)$ & Positive \\
+$[6, 10)$ & Strong \\
+$[10, \infty)$ & Very strong \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+%
+This method is easily generalised to any model-dependent experiment, and has been applied in areas such as systems biology, astronomy, computational chemistry, and indeed, in a less general fashion than the current work, to neutron reflectometry \cite{pullen_bayesian_2014,cornish_tests_2007,ensign_bayesian_2010,sivia_bayesian_1998}. 
+
+The Bayesian approach allows for the comparison of models where there are different numbers of free parameters, without the risk of overfitting and ``fitting an elephant'' \cite{mayer_drawing_2010}.
+This is due to the Bayesian evidence being derived from an integral in parameter space, and therefore scaling with the number of parameters. 
+This means that the addition of an additional free parameter to the model must offer a significant improvement to the likelihood determined.
+However, it is important also to note that the accuracy of the determined evidence depends on the prior probabilities chosen for each of the free parameters and therefore care should be taken to ensure that these are meaningful. 
+
+\subsection{\label{nr_meas} Neutron reflectometry measurements}
+
+The neutron reflectometry measurements investigated in this work were previously published by Hollinshead \emph{et al.} \cite{hollinshead_effects_2009} and subsequently re-analysed by McCluskey \emph{et al.} \cite{mccluskey_assessing_2019}. 
+The measurements concern the study of a monolayer of DSPC at the air/water interface and were conducted on seven different isotopic contrasts of the phospholipid and water. 
+These contrasts were made up from four phospholipid types; fully-hydrogenated (\ce{h}-DSPC), head-deuterated (\ce{d_{13}}-DSPC), tail-deuterated (\ce{d_{70}}-DSPC), and fully deuterated (\ce{d_{83}}-DSPC).
+These were paired with two water contrasts; \ce{D2O} and air-contrast matched water (ACMW, where \ce{D2O} and \ce{H2O} are mixed such that the resulting scattering length density is zero).
+The pairing of the fully-hydrogenated phospholipid with ACMW was not performed, most likely due to the lack of the scattering available from such a system.
+Table~\ref{tab:shorthand} gives the shorthands that are used in this work to refer to the different contrast pairings investigated.
+%
+\begin{table}
+\caption{\label{tab:shorthand} The shorthands used for the different combinations of phospholipid monolayer and water investigated.}
+\begin{ruledtabular}
+\begin{tabular}{lcr}
+Shorthand & Phospholipid contrast & Water contrast \\
+\colrule
+\ce{h}-\ce{D2O} & h-DSPC & \ce{D2O} \\
+\ce{d_{13}}-\ce{D2O} & \ce{d_{13}}-DSPC & \ce{D2O} \\
+\ce{d_{13}}-\ce{ACMW} & \ce{d_{13}}-DSPC & \ce{ACMW} \\
+\ce{d_{70}}-\ce{D2O} & \ce{d_{70}}-DSPC & \ce{D2O} \\
+\ce{d_{70}}-\ce{ACMW} & \ce{d_{70}}-DSPC & \ce{ACMW} \\
+\ce{d_{83}}-\ce{D2O} & \ce{d_{83}}-DSPC & \ce{D2O} \\
+\ce{d_{83}}-\ce{ACMW} & \ce{d_{83}}-DSPC & \ce{ACMW} \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+%
+The data analysed in this work was taken at a surface pressure of \SI{30}{\milli\newton\meter^{-1}}.
+Additional details of the data collection may be found in the original publication \cite{hollinshead_effects_2009}.
+
+\subsection{\label{models} Analytical model}
+
+In the model-dependent analysis of neutron reflectometry data, it is necessary to have a description of the experimental system to which the Abel\`{e}s matrix formalism may be applied. 
+Campbell \emph{et al.} investigated different models for the study of phospholipid monolayers and found a two-layer description that differentiates between the phospholipid heads, $h$, and tails, $t$, to be the best at reproducing the reflected intensity \cite{campbell_structure_2018}. 
+The head layer is adjacent to the solvent, while the tail layer is adjacent to the air. 
+The thickness of the tail layer is defined as $d_t$ and the head layer is $d_h$.
+At each of the three interfaces, there is some interfacial roughness, $\sigma$, which is modelled with an error function \cite{nevot_caracterisation_1980}.
+In this work, the roughness was taken to be conformal in nature, which is to say that it does not vary between interfaces, in agreement with the work of Campbell \emph{et al.} \cite{campbell_structure_2018}.
+This final assumption is reasonable given the fact that this system consists of a monolayer of a single lipid type, however, this may not be reasonable in more complex systems. 
+
+The scattering length density, $\rho_i$, for a layer $i$, from which the model reflectometry profile is obtained, is calculated from the volume fraction of the chemical component, $\phi_i$, the scattering length of the component, $b_i$ (found in Table~\ref{tab:sl}), and its molecular volume, $V_i$, 
+%
+\begin{equation}
+       \rho_i = \frac{b_i}{V_i}\phi_i + \rho_{\ce{H2O}} (1 - \phi_i).
+       \label{equ:sld}
+\end{equation}
+%    
+where, $\rho_{\ce{H2O}}$ is the scattering length density of water, which is \SI{0}{\angstrom^{-2}} for ACMW and \SI{6.35e6}{\angstrom^{-2}} for \ce{D2O}.
+To preserve the chemical bonding between the heads and tails of the phospholipid, the following constraint is included in the model, 
+%
+\begin{equation}
+    \phi_h = \frac{d_tV_h\phi_t}{V_td_h}.
+    \label{equ:constrain}
+\end{equation}
+This ensures that the number of head groups is equal to the number of pairs of tail groups. 
+%
+\begin{table}
+\caption{\label{tab:sl} The scattering lengths, $b_i$, for each of the DSPC phospholipid components in this work; where the subscript indicates either the head, $h$, or tail, $t$.}
+\begin{ruledtabular}
+\begin{tabular}{lcr}
+Phospholipid contrast & $b_h$/\si{\femto\meter} & $b_t$/\si{\femto\meter} \\
+\colrule
+\ce{h}-DSPC & \num{6.01} & \num{-3.58} \\
+\ce{d_{13}}-DSPC & \num{19.54} & \num{-3.58} \\ 
+\ce{d_{70}}-DSPC & \num{11.21} & \num{69.32} \\ 
+\ce{d_{83}}-DSPC & \num{24.75} & \num{69.32} \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+%
+
+The model outlined above has up to six possible free parameters; the two-layer thicknesses, $d_t$ and $d_h$, the two molecular volumes, $V_t$ and $V_h$, the volume fraction of the tail layer, $\phi_t$, and the conformal interfacial roughness, $\sigma$. 
+In this work, the evidence as a function of these parameters is of interest as it is possible to use the evidence and Bayes factor to determine the best set of free parameters for a given set of data. 
+Therefore, in Table~\ref{tab:ref} the uniform prior probability range and value when constrained is given for each of the parameters. 
+%
+\begin{table}
+\caption{\label{tab:ref} The constrained and uniform prior probability range for each of the free parameters in the analytical model.}
+\begin{ruledtabular}
+\begin{tabular}{lcr}
+Parameter & Constrained Value & Prior Range \\
+\colrule
+$d_h$/\si{\angstrom} & \num{10.0}\footnote{The work of Campbell \emph{et al.} uses a head layer thickness of \SI{10}{\angstrom} for the phosphatidylcholine head layer based on ``molecular dimensions'' \cite{campbell_structure_2018}.} & $[8.0, 16.0)$ \\
+$V_h$/\si{\angstrom^3} & \num{339.5}\footnote{From the work of Nu\v{c}erka \emph{et al.} \cite{kucerka_determination_2004} and Balgav\'{y} \cite{balgavy_evaluation_2001}.} & $[300.0, 380.0)$ \\
+$d_t$/\si{\angstrom} & \num{21.0}\footnote{The maximum tail length for DSPC is found as \SI{24.3}{\angstrom} from the Tanford equation \cite{tanford_hydrophobic_1980}, the value of \SI{21}{\angstrom} comes from assuming a chain tilt of \SI{30}{\degree}.} & $[10.0, 26.0)$ \\
+$\phi_t$ & \num{1.0}\footnote{Based on the hydrophobic interaction of the tail groups, it is unlikely that water would intercalate.} & $[0.5, 1.0)$\footnote{A maximum of \num{1} was set as a volume fraction greater than \num{1} would be unphysical.} \\
+$V_t$/\si{\angstrom^3} & \num{850.4}\footnote{From the previous analysis of this dataset \cite{mccluskey_assessing_2019}, which agrees with the expected compression of \SI{\sim12}{\percent} discussed by Campbell \emph{et al.} \cite{campbell_structure_2018}.} & $[800.0, 1000.0)$ \\
+$\sigma$/\si{\angstrom} & \num{2.9}\footnote{From the work of Campbell \emph{et al.} \cite{campbell_structure_2018}.} & $[2.9, 5.0)$\footnote{The minimum of \SI{2.9}{\angstrom} is based on that of water \cite{braslau_surface_1985,sinha_xray_1988}, and the fact that surfactants have been shown to increase surface roughness \cite{tikhonov_xray_2000}.} \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+%
+These six parameters can give rise to \num{63} permutations where there is at least one free parameter. 
+These permutations constitute every possible combination of the six parameters, either held constant or being allowed to varies within the prior probability. 
+This allows for a complete understanding of which combinations of constrained and free parameters give rise to the highest evidence, and therefore represents the maximum information density that may be obtained from the given data.
+We note again, that both the chosen prior and the constrained values are not infallible and will influence the result. 
+
+All seven isotopic neutron contrasts were analysed with a single structural model. 
+In doing so we make the common assumption that there is no effect on the structure as a result of the contrast variation method \cite{nelson_motofit_2006}. 
+Additionally, the reflected intensity from the model was scaled and a uniform background was added based on values obtained in the previous analysis of this dataset \cite{mccluskey_assessing_2019}. 
+We accept that these parameters may influence the resulting evidence, as was shown in the work of Sivia and Webster \cite{sivia_bayesian_1998}.
+
+\section{\label{results} Results \& Discussion}
+
+\subsection{All parameters}
+Figure~\ref{fig:iterations} shows the variation of the estimated evidence as a function of iterations, for the model where all six parameters were unconstrained. 
+%
+\begin{figure}
+\includegraphics[width=0.4\textwidth]{iterations}
+\caption{\label{fig:iterations} The estimation of evidence as a function of number of samples; for the model where all parameters were unconstrained.}
+\end{figure}
+%
+This plot shows clearly the ability for the nested sampling method to determine a good estimate of $\ln\{p(\mathbf{D}|H)\}$, with the plot plateauing at \input{th_mvh_tt_phit_mvt_rough_ev.txt}\unskip\;after more than \num{10000} samples.
+
+In addition to the ability for the nested sampling method to determine the evidence for a given model, it also allows for the posterior probabilities of the analysis to be evaluated. 
+Figure~\ref{fig:post} gives the posterior probabilities and cross-correlations between each of the six parameters. 
+%
+\begin{figure}
+\includegraphics[width=0.45\textwidth]{post_all}
+\caption{\label{fig:post} The posterior probabilities and correlation plots for each of the six variables in the model.}
+\end{figure}
+%
+It is clear that the volume fraction of the tail layer, $\phi_t$, and the interfacial roughness, $\sigma$, both are not complete represented by the defined prior probabilities. 
+Hence, there lacks a full Gaussian distribution and the extremely skewed probability distribution. 
+However, maximum for $\phi_t$ and minimum for $\sigma$ both come from physical limitations on the system; the former being that the volume fraction cannot be greater than 1, and the latter being that a surfactant monolayer will increase the surface roughness compared to water \cite{tikhonov_xray_2000}, which is \SI{\sim2.9}{\angstrom} \cite{braslau_surface_1985,sinha_xray_1988}. 
+The skew-ness of $p(\phi_t)$ is to be expected given the hydrophobic interaction between the phospholipid tails which create the situation where it is highly unlikely for water to be intercalated into the tail structure. 
+The nature of $p(\sigma)$ is similar in that the expected value of \SI{2.9}{\angstrom} is the minimum value available to the distribution. 
+However, it may be the case that by fitting all possible parameters, the data is being overfitted. 
+Luckily, the Bayesian model comparison method allows for the evidence comparison to fit the model which offers the maximum information to be obtained, without over-fitting to the data. 
+
+\subsection{Greatest evidence}
+The $\ln\{p(\mathbf{D}|H)\}$ for all of the \num{63} possible permutations of the free parameters was determined.
+This allows for the comparison of these to determine which model (set of varying parameters) offers the most information from the dataset, without the over-fitting to the data that may be occurring when all six parameters are varied. 
+This comparison plotted in Figure~\ref{fig:evidence} \footnote{These values are tabulated in Table~S1.}. 
+%
+\begin{figure*}
+\includegraphics[width=\textwidth]{evidence}
+\caption{\label{fig:evidence} A comparison of the $\ln\{p(\mathbf{D}|H)\}$ for each of the \num{63} permutations of free parameters available to the analytical model. The dashed line indicated the maximum evidence observed. This data is Tabulated in Table~S1.}
+\end{figure*}
+%
+The dotted black line indicates the set of free parameters that offer the greatest evidence for the co-refinement of the seven contrasts of neutron reflectometry data, which in this case is \input{best_label.txt}\unskip, which has $\ln\{p(\mathbf{D}|H)\}$ of \input{best_ev.txt}\unskip. 
+The set of parameters with the next greatest evidence is \input{next_best_label.txt}\unskip, however, $\ln\{p(\mathbf{D}|H)\}$ for this set of parameters is \input{next_best_ev.txt}\unskip.
+The interpretation of the Bayes factor between these two sets of parameters gives $2\ln{B_{xy}}=$\input{diff_ev.txt}\unskip\;where, \input{best_label.txt}\unskip\;is $x$ and \input{next_best_label.txt}\unskip\;is $y$. 
+This indicates that there strong or very strong evidence for the more complex model, and that the maximum information density that can be obtained from the analysis at hand, without over-fitting, is the fitting of \input{best_label.txt}\unskip. 
+
+Figure~\ref{fig:post_best} shows the posterior probability distributions that were obtained from the \input{best_label.txt}\unskip\;set of parameters. 
+%
+\begin{figure}
+\includegraphics[width=0.45\textwidth]{post_best}
+\caption{\label{fig:post_best} The posterior probabilities and correlation plots when \protect\input{best_label.txt}\unskip\;were the variable parameters.}
+\end{figure}
+%
+The median values for each of the probability distributions and their \SI{95}{\percent} confidence intervals are given in Table~\ref{tab:results}. 
+%
+\begin{table}
+\caption{\label{tab:results} The median values and \SI{95}{\percent} confidence intervals for each of the free parameters in the model with the greatest evidence.}
+\begin{ruledtabular}
+\begin{tabular}{lr}
+Free Parameter & Value \\
+\colrule
+$d_h$/\si{\angstrom} & \input{d_h_range.txt} \\ 
+$V_h$/\si{\angstrom^3} & \input{V_h_range.txt} \\ 
+$d_t$/\si{\angstrom} & \input{d_t_range.txt} \\ 
+$V_t$/\si{\angstrom^3} & \input{V_t_range.txt} \\ 
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+%
+The value found here for the phosphatidylcholine is slightly larger than the \SI{10}{\angstrom} used by Campbell \emph{et al.} \cite{campbell_structure_2018} and the \SI{10.5}{\angstrom} quoted by Li \emph{et al.} \cite{li_some_1998}. 
+The thickness of the tail layer that is observed is less than that suggested previously \cite{campbell_structure_2018}.
+However, it agrees well with the results from the original analysis of this data \cite{hollinshead_effects_2009}, which itself was consistent with previous x-ray reflectometry measurements \cite{dewolf_phase_1999,brezesinski_xray_2001,struth_organization_2001}.
+The tail molecular volume agrees well with the compression of \SI{\sim12}{\percent}, when compared to the values from other experimental techniques \cite{sun_order_1994,armen_phospholipid_1998}, suggested by Campbell \emph{et al.}.
+
+The reflectometry profiles for the median values is compared with the experimental data in Figure~\ref{fig:refl}. 
+%
+\begin{figure}
+\includegraphics[width=0.4\textwidth]{refl}
+\caption{\label{fig:refl} The experimental (coloured lines) reflectometry and the median values for the model with greatest evidence (black lines). The different contrasts are offset be an order of magnitude in reflected intensity; \ce{d_{13}}-ACMW (blue), \ce{d_{13}}-\ce{D2O} (orange), \ce{h}-\ce{D2O} (green), \ce{d_{70}}-ACMW (red), \ce{d_{70}}-\ce{D2O} (purple), \ce{d_{83}}-ACMW (brown), and \ce{d_{83}}-\ce{D2O} (pink).}
+\end{figure}
+%
+There is clear agreement between the experiment and the model across all of the contrasts. 
+This indicates that it is likely that there is little variation due to the isotopic contrast variation that was used, and the assumption that is discussed in \ref{models} is valid. 
+
+\subsection{Comparison with previous analysis}
+
+As mentioned above, this particular experimental dataset was previously analysed by McCluskey \emph{et al.} \cite{mccluskey_assessing_2019}.
+The analytical model used in this previous work was similar to that used herein, however, the tail volume of the phospholipid was constrained based on the assumption that the measured area per molecule was accurate and the volume fraction of the tail layer is \num{1}. 
+That model had three free parameters, namely $d_h$, $d_t$, and $\sigma$. 
+
+This previous analysis made no effort to evaluate different models of analysis or numbers of free parameters. 
+Therefore, it is not clear if the three parameters chosen offered the maximum information density available. 
+While not completely comparable, as the constrained value in this work and that were different, the suggestion from this work that having \input{best_label.txt}\unskip\;as the free parameters does not match with those probed previously.
+In future, we hope that by outlining this general methodology, others will consider the evidence of their particular model and the free parameter being used during their analysis.
+
+\subsection{Best per number of parameters}
+
+Finally, we will briefly present the best set of parameters for each number of parameters. 
+These are shown in Figure~\ref{fig:best_per}, which has the characteristic shape found in the previous work by Sivia and others \cite{sivia_analysis_1991,sivia_introduction_1993,sivia_bayesian_1998,sivia_data_2005}. 
+%
+\begin{figure}
+\includegraphics[width=0.4\textwidth]{best_per}
+\caption{\label{fig:best_per} A comparison of the evidence for the set of parameters with the greatest evidence, per number of parameters. The evidence for a single parameter has been cut off for clarity, however it had a value of \protect\input{tt_ev.txt}.}
+\end{figure}
+%
+This plot can be seen to peak when there are four free parameters, before dropping off slowly. 
+This drop off indicates that when more parameters are included there is an indication that over-fitting is occurring. 
+This plot shows clearly where the maximum information is available in the analysis for this particular reflectometry data. 
+
+\section{\label{conclusions} Conclusions}
+
+This work outlines a general application of a Bayesian framework to the problem of model selection in neutron reflectometry. 
+Building on the work of Sivia and co-workers in the 1990s \cite{sivia_bayesian_1998}, we have utilised a nested sampling method to generalise the methodology beyond the assumption of only one significant maximum \cite{sivia_analysis_1991}. 
+This offers the ability to go beyond the three-parameter space previously investigated to consider every possible parameter in an analysis problem.
+In doing so, it is possible to compare the evidence of different models, where different numbers of parameters are allowed to vary, to determine that which offers the maximum information, without over-fitting. 
+
+To show this in action, we have investigated the analysis of seven isotopic contrasts of neutron reflectometry data from a phospholipid monolayer at the air/water interface. 
+This particular analysis had a maximum of six variable parameters, and in this work, the evidence of all \num{63} possible permutations of these parameters was determined. 
+This allowed for the permutation that offered the maximum evidence to be found, which under the circumstances of the chosen priors was when \input{best_label.txt} were varied. 
+This particular combination of parameters had $\ln\{p(\mathbf{D}|H)\}$ of \input{best_ev.txt}, while the next best, which had more free parameters had a value of \input{next_best_ev.txt}. 
+This was interpreted in terms of the Bayes factor, and it was shown that there was strong evidence for the \input{best_label.txt} model.  
+
+Finally, we have compared these free parameters with those used previously to analyse the same dataset \cite{mccluskey_assessing_2019}. 
+This comparison indicates that this previous analysis did not necessarily maximise the information density available to the data. 
+We hope that by developing and sharing of this methodology, that in future those analysing reflectometry data will consider which of the free parameters in their models may be varied and will try to determine the evidence for their particular model with respect to other options before completing their analysis. 
+
+\section*{Reproducibility Statement}
+
+Electronic Supplementary Information (ESI) available: All analysis/plotting scripts and data files allowing for a fully reproducible, and automated, analysis workflow for the work presented is available at \url{https://github.com/arm61/model\_select} (DOI: 10.5281/zenodo.xxxxxxx) under a CC BY-SA 4.0 license.
+
+\section*{Author Contributions}
+
+A.R.M. proposed, implemented, and applied the Bayesian model comparison framework, with input from T.A., J.F.K.C. and T.S.; J.F.K.C. and T.S. sourced funding; A.R.M. wrote the manuscript, with input from all authors.
+
+\section*{Acknowledgements}
+
+A.R.M. would like to acknowledge David J. Barlow and M. Jayne Lawrence for kindly sharing the neutron reflectometry data used, and Simon Titmuss for suggesting the use of the \texttt{dynesty} package.
+This work is supported by the Ada Lovelace Centre – a joint initiative between the Science and Technology Facilities Council (as part of UK Research and Innovation), Diamond Light Source, and the UK Atomic Energy Authority.
+
+
+\bibliography{paper}
+
+\end{document}

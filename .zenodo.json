@@ -1,0 +1,29 @@
+{
+	"title": "model_select",
+	"creators": [{
+			"name": "McCluskey, Andrew R.",
+			"affiliation": "Diamond Light Source, Harwell Campus,. Didcot, OX11 0DE, UK.; Department of Chemistry, University of Bath, Claverton Down, Bath, BA2 7AY, UK.",
+			"orcid": "0000-0003-3381-5911"
+		},
+		{
+			"name": "Arnold, Thomas",
+			"affiliation": "European Spallation Source, SE-211 00 Lund, Sweden.; ISIS Neutron and Muon Source, Science and Technology Facilities Council, Rutherford Appleton Laboratory, Harwell Oxford, Didcot, OX11 0QX, UK.; Department of Chemistry, University of Bath, Claverton Down, Bath, BA2 7AY, UK.",
+			"orcid": "0000-0001-7196-7831"
+		},
+    	{
+      		"name": "Cooper, Joshaniel, F. K.",
+			"affiliation": "ISIS Neutron and Muon Source, Science and Technology Facilities Council, Rutherford Appleton Laboratory, Harwell Oxford, Didcot, OX11 0QX, UK."
+    	},
+    	{
+      		"name": "Snow, Tim", 
+      		"affiliation": "Diamond Light Source, Harwell Campus,. Didcot, OX11 0DE, UK.; School of Chemistry, University of Bristol, Bristol BS8 1TS, UK",
+      		"orcid": "0000-0001-7146-6885"
+    	}
+	],
+	"description": "ESI for \"A general approach to maximise information density in neutron reflectometry analysis\" ",
+	"access_right": "open",
+	"license": "CC-BY-SA-4.0",
+	"grants": [{
+		"funder": "Science and Technologies Facilities Council"
+	}]
+}

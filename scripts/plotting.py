@@ -29,6 +29,15 @@ CON_LIST = [
     "d83d2o",
 ]
 
+VARIABLES = [
+    "th",
+    "mvh",
+    "tt", 
+    "phit",
+    "mvt",
+    "rough", 
+]
+
 
 sys.path.append('scripts/')
 
@@ -113,26 +122,26 @@ class Plotting:
         """
         for i in range(len(self.logz)):
             file_latex = open(
-                'results/{}_ev.txt'.format(self.variables_p[i]),
+                'paper/{}_ev.txt'.format(self.variables_p[i]),
                 'w',
             )
             file_latex.write(
-                r'\\num{' + r'{:.1f}'.format(
+                r'\num{' + r'{:.1f}'.format(
                     self.logz[i],
                 ) + r'\pm' + r'{:.1f}'.format(self.logz_err[i]) + r'}',
             )
             file_latex.close()
-        file_latex = open('results/best_label.txt', 'w')
+        file_latex = open('paper/best_label.txt', 'w')
         file_latex.write(self.best_latex[0])
         file_latex.close()
 
-        file_latex = open('results/next_best_label.txt', 'w')
+        file_latex = open('paper/next_best_label.txt', 'w')
         file_latex.write(self.best_latex[1])
         file_latex.close()
 
-        file_ev = open('results/best_ev.txt', 'w')
+        file_ev = open('paper/best_ev.txt', 'w')
         file_ev.write(
-            r'\\num{' + r'{:.1f}'.format(
+            r'\num{' + r'{:.1f}'.format(
                 self.best_ev[0].n
             ) + r'\pm' + r'{:.1f}'.format(
                 self.best_ev[0].s
@@ -140,9 +149,9 @@ class Plotting:
         )
         file_ev.close()
 
-        file_ev = open('results/next_best_ev.txt', 'w')
+        file_ev = open('paper/next_best_ev.txt', 'w')
         file_ev.write(
-            r'\\num{' + r'{:.1f}'.format(
+            r'\num{' + r'{:.1f}'.format(
                 self.best_ev[1].n
             ) + r'\pm' + r'{:.1f}'.format(
                 self.best_ev[1].s
@@ -151,9 +160,9 @@ class Plotting:
         file_ev.close()
 
         diff = (self.best_ev[0] - self.best_ev[1]) * 2
-        file_diff = open('results/diff_ev.txt', 'w')
+        file_diff = open('paper/diff_ev.txt', 'w')
         file_diff.write(
-            r'\\num{' + r'{:.1f}'.format(
+            r'\num{' + r'{:.1f}'.format(
                 diff.n,
             ) + r'\pm' + r'{:.1f}'.format(diff.s) + r'}',
         )
@@ -163,12 +172,12 @@ class Plotting:
         """
         Write the evidence values to a table.
         """
-        file_latex = open('results/ev_table.txt', 'w')
+        file_latex = open('paper/ev_table.txt', 'w')
         for i, evidence in enumerate(np.argsort(self.logz)[::-1]):
             file_latex.write(
                 r'{}'.format(
                     self.latex_p[evidence],
-                ) + r' & \\num{' + r'{:.1f}'.format(
+                ) + r' & \num{' + r'{:.1f}'.format(
                     self.logz[evidence]
                 ) + r'\pm' + r'{:.1f}'.format(self.logz_err[evidence]) + r'}',
             )
@@ -205,7 +214,7 @@ class Plotting:
         )
         axes.set_xlabel(r'Free Parameters')
         axes.set_ylabel(r'$\ln\{p(\mathbf{D}|H)\}$')
-        plt.savefig('figures/evidence.pdf')
+        plt.savefig('paper/evidence.pdf')
         plt.close()
 
     def plot_best_per_number(self):
@@ -230,7 +239,7 @@ class Plotting:
         axes.set_xlabel(r'Free Parameters')
         axes.set_ylabel(r'$\ln\{p(\mathbf{D}|H)\}$')
         axes.set_ylim(6.8e3, 6.88e3)
-        plt.savefig('figures/best_per.pdf')
+        plt.savefig('paper/best_per.pdf')
         plt.close()
 
     def plot_correlation_best(self):
@@ -242,17 +251,16 @@ class Plotting:
         plt.subplots(figsize=(11.25, 11.25))
         plotting.cornerplot(
             file_h5,
-            labels=self.variables_p,
+            labels=self.units_p[np.argsort(self.logz)[-1]],
             color=list(fig_params.TABLEAU.values())[0],
         )
-        plt.savefig('figures/post_best.pdf')
+        plt.savefig('paper/post_best.pdf')
         plt.close()
 
     def plot_for_all(self):
         """
         Plot the corner plot where all parameters are varied.
         """
-        self.best_file = self.variables_p[np.argsort(self.logz)[-1]]
         file_h5 = h5py.File('output/model^th_mvh_tt_phit_mvt_rough.h5', 'r')
         axes = plt.subplots(figsize=(10, 5))[1]
         axes.errorbar(
@@ -264,16 +272,53 @@ class Plotting:
         axes.set_xscale('log')
         axes.set_xlabel(r'Samples')
         axes.set_ylabel(r'$\ln\{p(\mathbf{D}|H)\}$')
-        plt.savefig('figures/iterations.pdf')
+        plt.savefig('paper/iterations.pdf')
         plt.close()
         plt.subplots(figsize=(11.25, 11.25))
         plotting.cornerplot(
             file_h5,
-            labels=self.variables_p,
+            labels=self.units_p[-1],
             color=list(fig_params.TABLEAU.values())[0],
         )
-        plt.savefig('figures/post_all.pdf')
+        plt.savefig('paper/post_all.pdf')
         plt.close()
+
+    def plot_for_any(self, vars, i):
+        """
+        Plot the corner plot where all parameters are varied.
+        """
+        file_h5 = h5py.File('output/model^{}.h5'.format(vars), 'r')
+        plt.subplots(figsize=(11.25, 11.25))
+        plotting.cornerplot(
+            file_h5,
+            labels=self.units_p[i],
+            color=list(fig_params.TABLEAU.values())[0],
+        )
+        plt.savefig('paper/post_{}.pdf'.format(vars))
+        plt.close()
+
+    def make_plots_latex(self):
+        """
+        Make a latex snippet for all the correlation plots
+        """
+        latex_file = open('paper/correlation_plots_si.txt', 'w')
+        for i in range(len(self.variables_p)):
+            latex_file.write(r'%')
+            latex_file.write('\n')
+            latex_file.write(r'\begin{figure}')
+            latex_file.write('\n')
+            latex_file.write(r'\includegraphics[width=')
+            latex_file.write('{}'.format(0.45 / (7 - len(self.variables_p[i].split('_')))))
+            latex_file.write(r'\textwidth]{post_' + self.variables_p[i] + '}')
+            latex_file.write('\n')
+            latex_file.write(r'\caption{\label{fig:post_' + self.variables_p[i] + '} ')
+            latex_file.write(r'The posterior probabilities and correlation plots when ' + self.latex_p[i] + ' is varied in the model.}')
+            latex_file.write('\n')
+            latex_file.write(r'\end{figure}')
+            latex_file.write('\n')
+            latex_file.write(r'%')
+            latex_file.write('\n')
+        latex_file.close()
 
     def plot_refl_best(self):
         """
@@ -320,7 +365,8 @@ class Plotting:
         axes.set_yscale('log')
         axes.set_xlabel(r'$q$/Å$^{-1}$')
         axes.set_ylabel(r'$R(q)q^4$')
-        plt.savefig('figures/refl.pdf')
+        plt.savefig('paper/refl.pdf')
+        plt.close()
 
     def write_latex_percentiles(self):
         """
@@ -339,22 +385,23 @@ class Plotting:
                 weights,
             )
             file_latex = open(
-                'results/{}_range.txt'.format(
+                'paper/{}_range.txt'.format(
                     best_labels[1:-1].split('$/$')[i],
                 ),
                 'w',
             )
             file_latex.write(
-                r'${:.2f}'.format(
+                r'${:.1f}'.format(
                     percentiles[i, 1],
-                ) + r'^{' + r'+{:.2f}'.format(
-                    percentiles[i, 2],
-                ) + r'}_{' + r'-{:.2f}'.format(percentiles[i, 0]) + r'}$',
+                ) + r'^{' + r'+{:.1f}'.format(
+                    percentiles[i, 2] - percentiles[i, 1],
+                ) + r'}_{' + r'-{:.1f}'.format(percentiles[i, 1] - percentiles[i, 0]) + r'}$',
             )
             file_latex.close()
 
 plotter = Plotting()
 plotter.generate_permutations()
+plotter.make_plots_latex()
 plotter.read_all_logz()
 plotter.write_latex_logz()
 plotter.write_latex_logz_table()
@@ -364,3 +411,5 @@ plotter.plot_correlation_best()
 plotter.plot_for_all()
 plotter.plot_refl_best()
 plotter.write_latex_percentiles()
+for i in range(len(plotter.variables_p)):
+    plotter.plot_for_any(plotter.variables_p[i], i)

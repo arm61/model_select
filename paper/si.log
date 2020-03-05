@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.3)  5 MAR 2020 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.3)  5 MAR 2020 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -675,7 +675,7 @@ No file si.bbl.
 Here is how much of TeX's memory you used:
  17255 strings out of 494060
  332949 string characters out of 6163036
- 393353 words of memory out of 5000000
+ 394353 words of memory out of 5000000
  20822 multiletter control sequences out of 15000+600000
  547977 words of font info for 83 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -698,7 +698,7 @@ e/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
 live/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
 texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/loc
 al/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on si.pdf (2 pages, 169832 bytes).
+Output written on si.pdf (2 pages, 175102 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream

@@ -1,6 +1,6 @@
 # A general approach to maximise information density in neutron reflectometry analysis
 
-[![arXiv](https://img.shields.io/badge/arXiv-1910.10581-orange.svg)](https://arxiv.org/abs/1910.10581) [![License](https://img.shields.io/github/license/arm61/lipids_at_airdes.svg?color=lightgrey)](https://github.com/arm61/lipids_at_airdes/blob/master/LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3697795.svg)](https://doi.org/10.5281/zenodo.3697795) [![arXiv](https://img.shields.io/badge/arXiv-1910.10581-orange.svg)](https://arxiv.org/abs/1910.10581) [![License](https://img.shields.io/github/license/arm61/lipids_at_airdes.svg?color=lightgrey)](https://github.com/arm61/lipids_at_airdes/blob/master/LICENSE)
 
 [Andrew R. McCluskey](https://orcid.org/0000-0003-3381-5911)&ast;, [Thomas Arnold](https://orcid.org/0000-0001-7196-7831), Joshaniel F. K. Cooper, and [Tim Snow](https://orcid.org/0000-0001-7146-6885)
 

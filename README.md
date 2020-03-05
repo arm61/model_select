@@ -35,9 +35,9 @@ Be aware that the analyses within this work are non-trivial and take many hours 
 To re-run all analysis, simply run the following commands:
 
 ```
-conda env create --prefix ./bayes_mod --file enviroment.yml
+conda env create --prefix ./model_select --file enviroment.yml
 
-source activate ./bayes_mod
+source activate ./model_select
 
 snakemake clear # this will remove all of the output from previous runs
 

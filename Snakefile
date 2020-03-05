@@ -20,6 +20,12 @@ rule targets:
         'paper/paper.pdf',
         'paper/si.pdf'
 
+rule clear:
+    run:
+        shell('rm paper/*.pdf')
+        shell('rm paper/*.txt')
+        shell('rm output/*')
+
 rule make_si:
     input:
         'paper/si.tex',

@@ -1,37 +1,39 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.3)  5 MAR 2020 10:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.3)  30 APR 2020 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **paper.tex
 (./paper.tex
 LaTeX2e <2018-12-01>
-(/usr/local/texlive/2019basic/texmf-dist/tex/latex/revtex/revtex4-1.cls
-Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
-ex4/ for documentation)
- Copyright (c) 2009 The American Physical Society.
+(/usr/local/texlive/2019basic/texmf-dist/tex/latex/revtex/revtex4-2.cls
+Document Class: revtex4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/re
+vtex/ for documentation)
+ Copyright (c) 2019 American Physical Society.
  mailto:revtex@aps.org
  Licensed under the LPPL:
 http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
  Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
- Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
-ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>Version (4.2c)
+: Modified by Mark Doyle
+ .
+ltxutil[2019/01/18/14:29:48 4.2c utilities package (portions licensed from W. E
 . Baxter web at superscript.com)]
-LaTeX Info: Redefining \@centercr on input line 308.
-Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
+LaTeX Info: Redefining \@centercr on input line 315.
+Class revtex4-2 Info: Repairing broken LaTeX eqnarray on input line 365.
 \eqncolsep=\skip41
-Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
-note on input line 433.
-Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
+Class revtex4-2 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 440.
+Class revtex4-2 Info: Repairing broken LateX \@sect on input line 762.
 \intertabularlinepenalty=\count80
 \@tbpen=\count81
 \@arstrutbox@hline=\box27
-Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
-Class revtex4-1 Info: Making \typeout \long on input line 2046.
-ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
+Class revtex4-2 Info: Repairing broken LaTeX \@xbitor on input line 1793.
+Class revtex4-2 Info: Making \typeout \long on input line 2053.
+ltxfront[2019/01/18/14:29:48 4.2c frontmatter package (AO,DPC,MD)]
 \c@affil=\count82
 \c@collab=\count83
 \absbox=\box28
-ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
+ltxgrid[2019/01/18/14:29:48 4.2c page grid package (portions licensed from W. E
 . Baxter web at superscript.com)]
 \c@linecount=\count84
 \output@latex=\toks14
@@ -45,8 +47,8 @@ ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
 \pagesofar=\box35
 \footsofar=\box36
 \pagegrid@col=\count85
-Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
- \\  on input line 5578.
+Class revtex4-2 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5585.
 \c@part=\count86
 \c@section=\count87
 \c@subsection=\count88
@@ -64,20 +66,20 @@ Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
 \@bibdataout=\write3
 \widetext@top=\box40
 \widetext@bot=\box41
-Class revtex4-1 Info: Selecting society aps on input line 7542.
-(/usr/local/texlive/2019basic/texmf-dist/tex/latex/revtex/aps4-1.rtx
-File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docu
-mentation)
-Class revtex4-1 Info: RevTeX society APS selected on input line 31.
+Class revtex4-2 Info: Selecting society aps on input line 7581.
+(/usr/local/texlive/2019basic/texmf-dist/tex/latex/revtex/aps4-2.rtx
+File: aps4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for doc
+umentation)
+Class revtex4-2 Info: RevTeX society APS selected on input line 37.
 )
 
-Class revtex4-1 Warning: No journal specified, using default pra.
+Class revtex4-2 Warning: No journal specified, using default pra.
 
-Class revtex4-1 Info: APS journal PRA selected on input line 7545.
-(/usr/local/texlive/2019basic/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
-File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
-documentation)
-Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+Class revtex4-2 Info: APS journal PRA selected on input line 7584.
+(/usr/local/texlive/2019basic/texmf-dist/tex/latex/revtex/aps10pt4-2.rtx
+File: aps10pt4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for
+ documentation)
+Class revtex4-2 Info: RevTeX pointsize 10pt selected on input line 36.
 )
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
@@ -164,14 +166,14 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count107
 )
-Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
+Class revtex4-2 Info: Repairing natbib's \BibitemShut on input line 7588.
 
-(/usr/local/texlive/2019basic/texmf-dist/tex/latex/revtex/revsymb4-1.sty
-Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ f
-or documentation)
-LaTeX Info: Redefining \frak on input line 95.
-LaTeX Info: Redefining \Bbb on input line 111.
-LaTeX Info: Redefining \REV@mathfrak on input line 119.
+(/usr/local/texlive/2019basic/texmf-dist/tex/latex/revtex/revsymb4-2.sty
+Package: revsymb4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ 
+for documentation)
+LaTeX Info: Redefining \frak on input line 101.
+LaTeX Info: Redefining \Bbb on input line 117.
+LaTeX Info: Redefining \REV@mathfrak on input line 125.
 ))
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
@@ -483,13 +485,13 @@ Package mhchem Warning: You did not specify a 'version' option for the mhchem
 .
 
 )
-Class revtex4-1 Info: Unrecognized array package. Please update this document c
+Class revtex4-2 Info: Unrecognized array package. Please update this document c
 lass! (Proceeding with fingers crossed.) on input line 14.
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 14.
+Class revtex4-2 Info: Robustifying \LaTeX's \boldmath command on input line 14.
 
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 14.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 14.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 14.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 14.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 14.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 14.
  (./paper.aux)
 \openout1 = `paper.aux'.
 
@@ -667,61 +669,66 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/usr/local/texlive/2019basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 ] [2]
+Underfull \hbox (badness 1708) in paragraph at lines 177--203
+\OT1/cmr/m/it/10 et al. \OT1/cmr/m/n/10 [[]] and sub-se-quently re-analysed by 
+Mc-
+ []
 
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 162.
+
+Underfull \hbox (badness 1436) in paragraph at lines 177--203
+\OT1/cmr/m/n/10 Cluskey \OT1/cmr/m/it/10 et al. \OT1/cmr/m/n/10 [[]]. The mea-s
+ure-ments con-cern
+ []
 
 [3]
 <iterations.pdf, id=35, 631.40114pt x 355.97227pt>
 File: iterations.pdf Graphic file (type pdf)
 <use iterations.pdf>
-Package pdftex.def Info: iterations.pdf  used on input line 269.
+Package pdftex.def Info: iterations.pdf  used on input line 281.
 (pdftex.def)             Requested size: 203.99689pt x 115.01065pt.
  (./th_mvh_tt_phit_mvt_rough_ev.txt)
 <post_all.pdf, id=36, 979.13098pt x 979.13098pt>
 File: post_all.pdf Graphic file (type pdf)
 <use post_all.pdf>
-Package pdftex.def Info: post_all.pdf  used on input line 279.
+Package pdftex.def Info: post_all.pdf  used on input line 292.
 (pdftex.def)             Requested size: 229.49844pt x 229.4982pt.
- [4 <./iterations.pdf> <./post_all.pdf
+ [4 <./iterations.pdf>]
 
-pdfTeX warning: pdflatex (file ./post_all.pdf): PDF inclusion: multiple pdfs wi
-th page group included in a single page
->]
-<evidence.pdf, id=85, 1471.5399pt x 516.82796pt>
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 303.
+
+<evidence.pdf, id=70, 1471.5399pt x 516.82796pt>
 File: evidence.pdf Graphic file (type pdf)
 <use evidence.pdf>
-Package pdftex.def Info: evidence.pdf  used on input line 297.
+Package pdftex.def Info: evidence.pdf  used on input line 310.
 (pdftex.def)             Requested size: 510.0pt x 179.1181pt.
- (./best_label.txt) (./best_ev.txt) (./next_best_label.txt)
-(./next_best_ev.txt) (./diff_ev.txt) (./best_label.txt) (./next_best_label.txt)
-(./best_label.txt) (./best_label.txt)
-<post_best.pdf, id=86, 675.59695pt x 675.59695pt>
+(./best_label.txt) (./best_ev.txt) (./next_best_label.txt) (./next_best_ev.txt)
+(./diff_ev.txt) (./best_label.txt) (./next_best_label.txt) (./best_label.txt)
+(./best_label.txt)
+<post_best.pdf, id=71, 675.59695pt x 675.59695pt>
 File: post_best.pdf Graphic file (type pdf)
 <use post_best.pdf>
-Package pdftex.def Info: post_best.pdf  used on input line 309.
+Package pdftex.def Info: post_best.pdf  used on input line 322.
 (pdftex.def)             Requested size: 229.49844pt x 229.49374pt.
- (./best_label.txt) (./best_label.txt)
-(./d_h_range.txt) (./V_h_range.txt) (./d_t_range.txt) (./V_t_range.txt)
-<refl.pdf, id=87, 642.12498pt x 901.91153pt>
+ (./best_label.txt) (./best_label.txt) (./d_h_range.txt)
+(./V_h_range.txt) (./d_t_range.txt) (./V_t_range.txt)
+<refl.pdf, id=72, 642.12498pt x 901.91153pt>
 File: refl.pdf Graphic file (type pdf)
 <use refl.pdf>
-Package pdftex.def Info: refl.pdf  used on input line 337.
+Package pdftex.def Info: refl.pdf  used on input line 350.
 (pdftex.def)             Requested size: 203.99689pt x 286.52576pt.
 
-Underfull \hbox (badness 1092) in paragraph at lines 346--349
+Underfull \hbox (badness 1092) in paragraph at lines 359--362
 []\OT1/cmr/m/n/10 As men-tioned above, this par-tic-u-lar ex-per-i-men-tal
  []
 
-(./best_label.txt)
-<best_per.pdf, id=88, 638.97491pt x 516.82796pt>
+(./best_label.txt) [5 <./post_all.pdf>]
+<best_per.pdf, id=92, 638.97491pt x 516.82796pt>
 File: best_per.pdf Graphic file (type pdf)
 <use best_per.pdf>
-Package pdftex.def Info: best_per.pdf  used on input line 361.
+Package pdftex.def Info: best_per.pdf  used on input line 374.
 (pdftex.def)             Requested size: 203.99689pt x 164.99402pt.
- (./tt_ev.txt) (./tt_ev.txt) [5] (./best_label.txt)
-(./best_ev.txt) (./next_best_ev.txt) (./best_label.txt) [6 <./evidence.pdf> <./
-post_best.pdf
+ (./tt_ev.txt) (./tt_ev.txt) [6 <./evidence.pdf> <./post_best.pdf
 
 pdfTeX warning: pdflatex (file ./post_best.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
@@ -732,73 +739,117 @@ age group included in a single page
 >]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 381.
+ on input line 382.
 
-
-Underfull \hbox (badness 1946) in paragraph at lines 392--393
+(./best_label.txt) (./best_ev.txt) (./next_best_ev.txt) (./best_label.txt)
+Underfull \hbox (badness 1946) in paragraph at lines 408--409
 []\OT1/cmr/m/n/10 A.R.M. pro-posed, im-ple-mented, and ap-plied the
  []
 
 (./paper.bbl [7 <./best_per.pdf>]
-Underfull \hbox (badness 1275) in paragraph at lines 288--295
+Underfull \hbox (badness 1859) in paragraph at lines 102--111
+ []\OT1/cmr/m/n/9 G. E. P^^Serez, G. Bernardo, H. Gas-par, J. F. K.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--111
+ \OT1/cmr/m/n/9 Cooper, F. Bas-tian-ini, A. J. Par-nell, and
+ []
+
+
+Underfull \hbox (badness 6691) in paragraph at lines 102--111
+ \OT1/cmr/m/n/9 A. D. F. Dun-bar, De-ter-mi-na-tion of the Thin-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--111
+ \OT1/cmr/m/n/9 Film Struc-ture of Zwitterion-Doped Poly(3,4-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--111
+ \OT1/cmr/m/n/9 ethylenedioxythiophene):Poly(styrenesulfonate): A
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 264--272
+ []\OT1/cmr/m/n/9 A. R. J. Nel-son, Co-refinement of multiple-contrast
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--318
+ []\OT1/cmr/m/n/9 F. Abel^^Res, Sur la prop-a-ga-tion des on-des
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 313--318
+ \OT1/cmr/m/n/9 ^^Selectromagn^^Setiques dans les mulieux srat-ifi^^Ses, Ann.
+ []
+
+
+Underfull \hbox (badness 1275) in paragraph at lines 363--372
  []\OT1/cmr/m/n/9 S. Waldie, T. K. Lind, K. Brown-ing, M. Moulin,
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 288--295
+Underfull \hbox (badness 2293) in paragraph at lines 363--372
  \OT1/cmr/m/n/9 M. Haertlein, V. T. Forsyth, A. Lu-chini, G. A.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--371
- []\OT1/cmr/m/n/9 A. V. Hughes, ``Ras-cal source-forge,'' $\OT1/cmtt/m/n/9 http
-s :
+Underfull \hbox (badness 10000) in paragraph at lines 452--458
+ []\OT1/cmr/m/n/9 A. V. Hughes, Ras-cal source-forge, $\OT1/cmtt/m/n/9 https :
  []
 
-) [8] (./paper.aux) ) 
+
+Underfull \hbox (badness 1694) in paragraph at lines 466--470
+ \OT1/cmr/m/n/9 J. F. Ankner, N. K. Berk, and C. F. Ma-jkrzak,
+ []
+
+[8]) [9] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 17595 strings out of 494060
- 340322 string characters out of 6163036
- 411869 words of memory out of 5000000
- 21098 multiletter control sequences out of 15000+600000
+ 17635 strings out of 494060
+ 340760 string characters out of 6163036
+ 416212 words of memory out of 5000000
+ 21138 multiletter control sequences out of 15000+600000
  548675 words of font info for 85 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 41i,17n,63p,552b,1160s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019basic/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019basic/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019basic/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019basic/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019basic/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019basic
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019ba
-sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/201
-9basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texliv
-e/2019basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/loc
-al/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><
-/usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r9.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy6.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy7.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy8.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2019basic/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019basic/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on paper.pdf (8 pages, 927947 bytes).
+ 41i,17n,63p,594b,1160s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2019basic/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2019basic/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019basic/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019basic/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019basic/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019basic
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019ba
+sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/201
+9basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/
+2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/tex
+live/2019basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/
+local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+</usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pf
+b></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.
+pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr9.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy6.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy7.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2019basic/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2019basic/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019basic/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on paper.pdf (9 pages, 933825 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
+ 259 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

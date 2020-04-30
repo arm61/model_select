@@ -1,13 +1,13 @@
-%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
 %Control: key (0)
 %Control: author (8) initials jnrlst
 %Control: editor formatted (1) identically to author
-%Control: production of article title (-1) disabled
+%Control: production of article title (0) allowed
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
 \providecommand{\noopsort}[1]{}\providecommand{\singleletter}[1]{#1}%
-\begin{thebibliography}{61}%
+\begin{thebibliography}{64}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -39,7 +39,7 @@
 \providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
 \providecommand \urlprefix  [0]{URL }%
 \providecommand \Eprint [0]{\href }%
-\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \doibase [0]{https://doi.org/}%
 \providecommand \selectlanguage [0]{\@gobble}%
 \providecommand \bibinfo  [0]{\@secondoftwo}%
 \providecommand \bibfield  [0]{\@secondoftwo}%
@@ -62,11 +62,14 @@
   {Sanchez-Fernandez}}, \bibinfo {author} {\bibfnamefont {K.~J.}\ \bibnamefont
   {Edler}}, \bibinfo {author} {\bibfnamefont {S.~C.}\ \bibnamefont {Parker}},
   \bibinfo {author} {\bibfnamefont {A.~J.}\ \bibnamefont {Jackson}}, \bibinfo
-  {author} {\bibfnamefont {R.~A.}\ \bibnamefont {Campbell}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {T.}~\bibnamefont {Arnold}},\ }\href {\doibase
-  10.1039/C9CP00203K} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Chem,
-  Chem. Phys.}\ }\textbf {\bibinfo {volume} {21}},\ \bibinfo {pages} {6133}
-  (\bibinfo {year} {2019}{\natexlab{a}})}\BibitemShut {NoStop}%
+  {author} {\bibfnamefont {R.~A.}\ \bibnamefont {Campbell}},\ and\ \bibinfo
+  {author} {\bibfnamefont {T.}~\bibnamefont {Arnold}},\ }\bibfield  {title}
+  {\bibinfo {title} {{B}ayesian determination of the effect of a deep eutectic
+  solvent on the structure of lipid monolayers},\ }\href
+  {https://doi.org/10.1039/C9CP00203K} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Chem, Chem. Phys.}\ }\textbf {\bibinfo {volume} {21}},\
+  \bibinfo {pages} {6133} (\bibinfo {year} {2019}{\natexlab{a}})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Clifton}\ \emph {et~al.}(2019)\citenamefont
   {Clifton}, \citenamefont {Paracini}, \citenamefont {Hughes}, \citenamefont
   {Lakey}, \citenamefont {Steinke}, \citenamefont {Cooper}, \citenamefont
@@ -78,11 +81,13 @@
   {author} {\bibfnamefont {J.~H.}\ \bibnamefont {Lakey}}, \bibinfo {author}
   {\bibfnamefont {N.-J.}\ \bibnamefont {Steinke}}, \bibinfo {author}
   {\bibfnamefont {J.~F.~K.}\ \bibnamefont {Cooper}}, \bibinfo {author}
-  {\bibfnamefont {M.}~\bibnamefont {Gavutis}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {M.~W.~A.}\ \bibnamefont {Skoda}},\ }\href {\doibase
-  10.1021/acs.langmuir.9b02350} {\bibfield  {journal} {\bibinfo  {journal}
-  {Langmuir}\ }\textbf {\bibinfo {volume} {35}},\ \bibinfo {pages} {13735}
-  (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+  {\bibfnamefont {M.}~\bibnamefont {Gavutis}},\ and\ \bibinfo {author}
+  {\bibfnamefont {M.~W.~A.}\ \bibnamefont {Skoda}},\ }\bibfield  {title}
+  {\bibinfo {title} {{S}elf-{A}ssembled {F}luid {P}hase {F}loating {M}embranes
+  with {T}unable {W}ater {I}nterlayers},\ }\href
+  {https://doi.org/10.1021/acs.langmuir.9b02350} {\bibfield  {journal}
+  {\bibinfo  {journal} {Langmuir}\ }\textbf {\bibinfo {volume} {35}},\ \bibinfo
+  {pages} {13735} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {P\'{e}rez}\ \emph {et~al.}(2019)\citenamefont
   {P\'{e}rez}, \citenamefont {Bernardo}, \citenamefont {Gaspar}, \citenamefont
   {Cooper}, \citenamefont {Bastianini}, \citenamefont {Parnell},\ and\
@@ -93,60 +98,105 @@
   \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Gaspar}}, \bibinfo
   {author} {\bibfnamefont {J.~F.~K.}\ \bibnamefont {Cooper}}, \bibinfo {author}
   {\bibfnamefont {F.}~\bibnamefont {Bastianini}}, \bibinfo {author}
-  {\bibfnamefont {A.~J.}\ \bibnamefont {Parnell}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {A.~D.~F.}\ \bibnamefont {Dunbar}},\ }\href {\doibase
-  10.1021/acsami.9b02700} {\bibfield  {journal} {\bibinfo  {journal} {ACS Appl.
-  Mater. Interfaces}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo {pages}
-  {13803} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+  {\bibfnamefont {A.~J.}\ \bibnamefont {Parnell}},\ and\ \bibinfo {author}
+  {\bibfnamefont {A.~D.~F.}\ \bibnamefont {Dunbar}},\ }\bibfield  {title}
+  {\bibinfo {title} {{D}etermination of the {T}hin-{F}ilm {S}tructure of
+  {Z}witterion-{D}oped
+  {P}oly(3,4-ethylenedioxythiophene):{P}oly(styrenesulfonate): {A} {N}eutron
+  {R}eflectivity {S}tudy},\ }\href {https://doi.org/10.1021/acsami.9b02700}
+  {\bibfield  {journal} {\bibinfo  {journal} {ACS Appl. Mater. Interfaces}\
+  }\textbf {\bibinfo {volume} {11}},\ \bibinfo {pages} {13803} (\bibinfo {year}
+  {2019})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Majkrzak}\ and\ \citenamefont
   {Berk}(1995{\natexlab{a}})}]{majkrzak_exact_1995}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
   {Majkrzak}}\ and\ \bibinfo {author} {\bibfnamefont {N.~F.}\ \bibnamefont
-  {Berk}},\ }\href {\doibase 10.1103/PhysRevB.52.10827} {\bibfield  {journal}
-  {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {52}},\
-  \bibinfo {pages} {10827} (\bibinfo {year} {1995}{\natexlab{a}})}\BibitemShut
-  {NoStop}%
+  {Berk}},\ }\bibfield  {title} {\bibinfo {title} {{E}xact determination of the
+  phase in neutron reflectometry},\ }\href
+  {https://doi.org/10.1103/PhysRevB.52.10827} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {52}},\ \bibinfo
+  {pages} {10827} (\bibinfo {year} {1995}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kirby}\ \emph {et~al.}(2012)\citenamefont {Kirby},
+  \citenamefont {Kienzle}, \citenamefont {Maranville}, \citenamefont {Berk},
+  \citenamefont {Krycka}, \citenamefont {Heinrich},\ and\ \citenamefont
+  {Majkrzak}}]{kirby_phase_2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~J.}\ \bibnamefont
+  {Kirby}}, \bibinfo {author} {\bibfnamefont {P.~A.}\ \bibnamefont {Kienzle}},
+  \bibinfo {author} {\bibfnamefont {B.~B.}\ \bibnamefont {Maranville}},
+  \bibinfo {author} {\bibfnamefont {N.~F.}\ \bibnamefont {Berk}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Krycka}}, \bibinfo {author}
+  {\bibfnamefont {F.}~\bibnamefont {Heinrich}},\ and\ \bibinfo {author}
+  {\bibfnamefont {C.~F.}\ \bibnamefont {Majkrzak}},\ }\bibfield  {title}
+  {\bibinfo {title} {{P}hase-sensitive specular neutron reflectometry for
+  imaging the nanometer scale composition depth profile of thin-film
+  materials},\ }\href {https://doi.org/10.1016/j.cocis.2011.11.001} {\bibfield
+  {journal} {\bibinfo  {journal} {Curr. Opin. Colloid Interface Sci}\ }\textbf
+  {\bibinfo {volume} {17}},\ \bibinfo {pages} {44} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {de~Haan}\ \emph {et~al.}(1995)\citenamefont
   {de~Haan}, \citenamefont {van Well}, \citenamefont {Adenwalla},\ and\
   \citenamefont {Felcher}}]{haan_retrieval_1995}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.-O.}\ \bibnamefont
   {de~Haan}}, \bibinfo {author} {\bibfnamefont {A.~A.}\ \bibnamefont {van
-  Well}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Adenwalla}}, \
+  Well}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Adenwalla}},\
   and\ \bibinfo {author} {\bibfnamefont {G.~P.}\ \bibnamefont {Felcher}},\
-  }\href {\doibase 10.1103/PhysRevB.52.10831} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {52}},\ \bibinfo
-  {pages} {10831} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+  }\bibfield  {title} {\bibinfo {title} {{R}etrieval of phase information in
+  neutron reflectometry},\ }\href {https://doi.org/10.1103/PhysRevB.52.10831}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo
+  {volume} {52}},\ \bibinfo {pages} {10831} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Majkrzak}\ \emph {et~al.}(2003)\citenamefont
   {Majkrzak}, \citenamefont {Berk},\ and\ \citenamefont
   {Perez-Salas}}]{majkrzak_phase_2003}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
-  {Majkrzak}}, \bibinfo {author} {\bibfnamefont {N.~F.}\ \bibnamefont {Berk}},
-  \ and\ \bibinfo {author} {\bibfnamefont {U.~A.}\ \bibnamefont
-  {Perez-Salas}},\ }\href {\doibase 10.1021/la0341254} {\bibfield  {journal}
-  {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {19}},\
-  \bibinfo {pages} {7796} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+  {Majkrzak}}, \bibinfo {author} {\bibfnamefont {N.~F.}\ \bibnamefont {Berk}},\
+  and\ \bibinfo {author} {\bibfnamefont {U.~A.}\ \bibnamefont {Perez-Salas}},\
+  }\bibfield  {title} {\bibinfo {title} {{P}hase-{S}ensitive {N}eutron
+  {R}eflectometry},\ }\href {https://doi.org/10.1021/la0341254} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {19}},\ \bibinfo {pages} {7796} (\bibinfo {year} {2003})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Nikova}\ \emph {et~al.}(2019)\citenamefont {Nikova},
+  \citenamefont {Salamatov}, \citenamefont {Kravtsov},\ and\ \citenamefont
+  {Ustinov}}]{nikova_novel_2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~S.}\ \bibnamefont
+  {Nikova}}, \bibinfo {author} {\bibfnamefont {Y.~A.}\ \bibnamefont
+  {Salamatov}}, \bibinfo {author} {\bibfnamefont {E.~A.}\ \bibnamefont
+  {Kravtsov}},\ and\ \bibinfo {author} {\bibfnamefont {V.~V.}\ \bibnamefont
+  {Ustinov}},\ }\bibfield  {title} {\bibinfo {title} {{N}ovel method of phase
+  determination in neutron reflectometry using reference layer},\ }\href
+  {https://doi.org/10.1088/1742-6596/1389/1/012153} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Phys.: Conf. Ser.}\ }\textbf {\bibinfo {volume}
+  {1389}},\ \bibinfo {pages} {012153} (\bibinfo {year} {2019})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Leeb}\ \emph {et~al.}(1998)\citenamefont {Leeb},
   \citenamefont {Kasper},\ and\ \citenamefont
   {Lipperheide}}]{leeb_determination_1998}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
-  {Leeb}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kasper}}, \ and\
-  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Lipperheide}},\ }\href
-  {\doibase 10.1016/S0375-9601(97)00972-9} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Lett. A}\ }\textbf {\bibinfo {volume} {239}},\ \bibinfo
-  {pages} {147} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
+  {Leeb}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kasper}},\ and\
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Lipperheide}},\
+  }\bibfield  {title} {\bibinfo {title} {{D}etermination of the phase in
+  neutron reflectometry by polarization measurements},\ }\href
+  {https://doi.org/10.1016/S0375-9601(97)00972-9} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Lett. A}\ }\textbf {\bibinfo {volume} {239}},\
+  \bibinfo {pages} {147} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Fiedeldey}\ \emph {et~al.}(1992)\citenamefont
   {Fiedeldey}, \citenamefont {Lipperheide}, \citenamefont {Leeb},\ and\
   \citenamefont {Sofianos}}]{fiedeldey_proposal_1992}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
   {Fiedeldey}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Lipperheide}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Leeb}}, \
+  {Lipperheide}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Leeb}},\
   and\ \bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont {Sofianos}},\
-  }\href {\doibase 10.1016/0375-9601(92)90885-P} {\bibfield  {journal}
+  }\bibfield  {title} {\bibinfo {title} {{A} proposal for the determination of
+  the phases in specular neutron reflection},\ }\href
+  {https://doi.org/10.1016/0375-9601(92)90885-P} {\bibfield  {journal}
   {\bibinfo  {journal} {Phys. Lett. A}\ }\textbf {\bibinfo {volume} {170}},\
   \bibinfo {pages} {347} (\bibinfo {year} {1992})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Majkrzak}\ and\ \citenamefont
@@ -154,7 +204,9 @@
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
   {Majkrzak}}\ and\ \bibinfo {author} {\bibfnamefont {N.~F.}\ \bibnamefont
-  {Berk}},\ }\href {\doibase 10.1103/PhysRevB.58.15416} {\bibfield  {journal}
+  {Berk}},\ }\bibfield  {title} {\bibinfo {title} {{E}xact determination of the
+  phase in neutron reflectometry by variation of the surrounding media},\
+  }\href {https://doi.org/10.1103/PhysRevB.58.15416} {\bibfield  {journal}
   {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {58}},\
   \bibinfo {pages} {15416} (\bibinfo {year} {1995}{\natexlab{b}})}\BibitemShut
   {NoStop}%
@@ -170,15 +222,19 @@
   {\bibfnamefont {M.}~\bibnamefont {Tarek}}, \bibinfo {author} {\bibfnamefont
   {D.}~\bibnamefont {Tobias}}, \bibinfo {author} {\bibfnamefont
   {V.}~\bibnamefont {Silin}}, \bibinfo {author} {\bibfnamefont
-  {J.}~\bibnamefont {Meuse}, \bibfnamefont {C.~W.~Woodward}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {A.~L.}\ \bibnamefont {Plant}},\ }\href {\doibase
-  10.1016/S0006-3495(00)76564-7} {\bibfield  {journal} {\bibinfo  {journal}
-  {Biophys. J.}\ }\textbf {\bibinfo {volume} {79}},\ \bibinfo {pages} {3330}
-  (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+  {J.}~\bibnamefont {Meuse}, \bibfnamefont {C.~W.~Woodward}},\ and\ \bibinfo
+  {author} {\bibfnamefont {A.~L.}\ \bibnamefont {Plant}},\ }\bibfield  {title}
+  {\bibinfo {title} {{F}irst-{P}rinciples {D}etermination of {H}ybrid {B}ilayer
+  {M}embrane {S}tructure by {P}hase-{S}ensitive {N}eutron {R}eflectometry},\
+  }\href {https://doi.org/10.1016/S0006-3495(00)76564-7} {\bibfield  {journal}
+  {\bibinfo  {journal} {Biophys. J.}\ }\textbf {\bibinfo {volume} {79}},\
+  \bibinfo {pages} {3330} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Koutsioubas}(2019)}]{koutsioubas_model_2019}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Koutsioubas}},\ }\href {\doibase 10.1107/S1600576719003534} {\bibfield
+  {Koutsioubas}},\ }\bibfield  {title} {\bibinfo {title} {{M}odel-independent
+  recovery of interfacial structure from multi-contrast neutron reflectivity
+  data},\ }\href {https://doi.org/10.1107/S1600576719003534} {\bibfield
   {journal} {\bibinfo  {journal} {J. Appl. Crystallogr.}\ }\textbf {\bibinfo
   {volume} {52}},\ \bibinfo {pages} {538} (\bibinfo {year} {2019})}\BibitemShut
   {NoStop}%
@@ -187,88 +243,107 @@
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~S.}\ \bibnamefont
   {Pedersen}}\ and\ \bibinfo {author} {\bibfnamefont {I.~W.}\ \bibnamefont
-  {Hamley}},\ }\href {\doibase 10.1016/0921-4526(94)90117-1} {\bibfield
-  {journal} {\bibinfo  {journal} {Physica B}\ }\textbf {\bibinfo {volume}
-  {198}},\ \bibinfo {pages} {16} (\bibinfo {year} {1994})}\BibitemShut
-  {NoStop}%
+  {Hamley}},\ }\bibfield  {title} {\bibinfo {title} {{A}nalysis of neutron and
+  {X}-ray reflectivity data by constrained least-squares methods},\ }\href
+  {https://doi.org/10.1016/0921-4526(94)90117-1} {\bibfield  {journal}
+  {\bibinfo  {journal} {Physica B}\ }\textbf {\bibinfo {volume} {198}},\
+  \bibinfo {pages} {16} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {de~Haan}\ and\ \citenamefont
   {Drijkoningen}(1994)}]{haan_genetic_1994}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.-O.}\ \bibnamefont
   {de~Haan}}\ and\ \bibinfo {author} {\bibfnamefont {G.~G.}\ \bibnamefont
-  {Drijkoningen}},\ }\href {\doibase 10.1016/0921-4526(94)90118-X} {\bibfield
-  {journal} {\bibinfo  {journal} {Physica B}\ }\textbf {\bibinfo {volume}
-  {198}},\ \bibinfo {pages} {24} (\bibinfo {year} {1994})}\BibitemShut
-  {NoStop}%
+  {Drijkoningen}},\ }\bibfield  {title} {\bibinfo {title} {{G}enetic algorithms
+  used in model finding and fitting for neutron reflection experiments},\
+  }\href {https://doi.org/10.1016/0921-4526(94)90118-X} {\bibfield  {journal}
+  {\bibinfo  {journal} {Physica B}\ }\textbf {\bibinfo {volume} {198}},\
+  \bibinfo {pages} {24} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Nelson}(2006)}]{nelson_motofit_2006}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~R.~J.}\
-  \bibnamefont {Nelson}},\ }\href {\doibase 10.1107/S0021889806005073}
-  {\bibfield  {journal} {\bibinfo  {journal} {J. Appl. Crystallogr.}\ }\textbf
-  {\bibinfo {volume} {39}},\ \bibinfo {pages} {273} (\bibinfo {year}
-  {2006})}\BibitemShut {NoStop}%
+  \bibnamefont {Nelson}},\ }\bibfield  {title} {\bibinfo {title}
+  {{C}o-refinement of multiple-contrast neutron/{X}-ray reflectivity data using
+  {MOTOFIT}},\ }\href {https://doi.org/10.1107/S0021889806005073} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Appl. Crystallogr.}\ }\textbf {\bibinfo
+  {volume} {39}},\ \bibinfo {pages} {273} (\bibinfo {year} {2006})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {van~der Lee}\ \emph {et~al.}(2007)\citenamefont
   {van~der Lee}, \citenamefont {Salah},\ and\ \citenamefont
   {Harzallah}}]{lee_comparison_2007}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {van~der Lee}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Salah}},
-  \ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Harzallah}},\
-  }\href {\doibase 10.1107/S0021889807032207} {\bibfield  {journal} {\bibinfo
+  {van~der Lee}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Salah}},\
+  and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Harzallah}},\
+  }\bibfield  {title} {\bibinfo {title} {{A} comparison of modern data analysis
+  methods for {X}-ray and neutron specular reflectivity data},\ }\href
+  {https://doi.org/10.1107/S0021889807032207} {\bibfield  {journal} {\bibinfo
   {journal} {J. Appl. Crystallogr.}\ }\textbf {\bibinfo {volume} {40}},\
   \bibinfo {pages} {820} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Gerelli}(2016{\natexlab{a}})}]{gerelli_aurore_2016}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Gerelli}},\ }\href {\doibase 10.1107/S1600576716000108} {\bibfield
-  {journal} {\bibinfo  {journal} {J. Appl. Crystallogr.}\ }\textbf {\bibinfo
-  {volume} {49}},\ \bibinfo {pages} {330} (\bibinfo {year}
-  {2016}{\natexlab{a}})}\BibitemShut {NoStop}%
+  {Gerelli}},\ }\bibfield  {title} {\bibinfo {title} {{A}urore: new software
+  for neutron reflectivity data analysis},\ }\href
+  {https://doi.org/10.1107/S1600576716000108} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Appl. Crystallogr.}\ }\textbf {\bibinfo {volume} {49}},\
+  \bibinfo {pages} {330} (\bibinfo {year} {2016}{\natexlab{a}})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Gerelli}(2016{\natexlab{b}})}]{gerelli_aurore_2016b}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Gerelli}},\ }\href {\doibase 10.1107/S1600576716002466} {\bibfield
-  {journal} {\bibinfo  {journal} {J. Appl. Crystallogr.}\ }\textbf {\bibinfo
-  {volume} {49}},\ \bibinfo {pages} {712} (\bibinfo {year}
-  {2016}{\natexlab{b}})}\BibitemShut {NoStop}%
+  {Gerelli}},\ }\bibfield  {title} {\bibinfo {title} {{A}urore: new software
+  for neutron reflectivity data analysis. corrigendum},\ }\href
+  {https://doi.org/10.1107/S1600576716002466} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Appl. Crystallogr.}\ }\textbf {\bibinfo {volume} {49}},\
+  \bibinfo {pages} {712} (\bibinfo {year} {2016}{\natexlab{b}})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Nelson}\ and\ \citenamefont
   {Prescott}(2019)}]{nelson_refnx_2019}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~R.~J.}\
   \bibnamefont {Nelson}}\ and\ \bibinfo {author} {\bibfnamefont {S.~W.}\
-  \bibnamefont {Prescott}},\ }\href {\doibase 10.1107/S1600576718017296}
-  {\bibfield  {journal} {\bibinfo  {journal} {J. Appl. Crystallogr.}\ }\textbf
-  {\bibinfo {volume} {52}},\ \bibinfo {pages} {193} (\bibinfo {year}
-  {2019})}\BibitemShut {NoStop}%
+  \bibnamefont {Prescott}},\ }\bibfield  {title} {\bibinfo {title} {refnx:
+  neutron and {X}-ray reflectometry analysis in {P}ython},\ }\href
+  {https://doi.org/10.1107/S1600576718017296} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Appl. Crystallogr.}\ }\textbf {\bibinfo {volume} {52}},\
+  \bibinfo {pages} {193} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Abel\`{e}s}(1948)}]{abeles_propagation_1948}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
-  {Abel\`{e}s}},\ }\href {\doibase 10.1051/anphys/194812030504} {\bibfield
-  {journal} {\bibinfo  {journal} {Ann. Phys.}\ }\textbf {\bibinfo {volume}
-  {12}},\ \bibinfo {pages} {504} (\bibinfo {year} {1948})}\BibitemShut
-  {NoStop}%
+  {Abel\`{e}s}},\ }\bibfield  {title} {\bibinfo {title} {{S}ur la propagation
+  des ondes \'{e}lectromagn\'{e}tiques dans les mulieux sratifi\'{e}s},\ }\href
+  {https://doi.org/10.1051/anphys/194812030504} {\bibfield  {journal} {\bibinfo
+   {journal} {Ann. Phys.}\ }\textbf {\bibinfo {volume} {12}},\ \bibinfo {pages}
+  {504} (\bibinfo {year} {1948})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Parratt}(1954)}]{parratt_surface_1954}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~G.}\ \bibnamefont
-  {Parratt}},\ }\href {\doibase 10.1103/PhysRev.95.359} {\bibfield  {journal}
-  {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {95}},\
-  \bibinfo {pages} {359} (\bibinfo {year} {1954})}\BibitemShut {NoStop}%
+  {Parratt}},\ }\bibfield  {title} {\bibinfo {title} {{S}urface {S}tudies of
+  {S}olids by {T}otal {R}eflection of {X}-rays},\ }\href
+  {https://doi.org/10.1103/PhysRev.95.359} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {95}},\ \bibinfo {pages}
+  {359} (\bibinfo {year} {1954})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Klibanov}\ and\ \citenamefont
   {Sacks}(1992)}]{klibanov_phaseless_1992}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~V.}\ \bibnamefont
   {Klibanov}}\ and\ \bibinfo {author} {\bibfnamefont {P.~E.}\ \bibnamefont
-  {Sacks}},\ }\href {\doibase 10.1063/1.529990} {\bibfield  {journal} {\bibinfo
-   {journal} {J. Math. Phys.}\ }\textbf {\bibinfo {volume} {33}},\ \bibinfo
-  {pages} {3813} (\bibinfo {year} {1992})}\BibitemShut {NoStop}%
+  {Sacks}},\ }\bibfield  {title} {\bibinfo {title} {{P}haseless inverse
+  scattering and the phase problem in optics},\ }\href
+  {https://doi.org/10.1063/1.529990} {\bibfield  {journal} {\bibinfo  {journal}
+  {J. Math. Phys.}\ }\textbf {\bibinfo {volume} {33}},\ \bibinfo {pages} {3813}
+  (\bibinfo {year} {1992})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Klibanov}\ and\ \citenamefont
   {Sacks}(1994)}]{klibanov_use_1994}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~V.}\ \bibnamefont
   {Klibanov}}\ and\ \bibinfo {author} {\bibfnamefont {P.~E.}\ \bibnamefont
-  {Sacks}},\ }\href {\doibase 10.1006/jcph.1994.1099} {\bibfield  {journal}
-  {\bibinfo  {journal} {J. Comp. Phys.}\ }\textbf {\bibinfo {volume} {112}},\
-  \bibinfo {pages} {273} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+  {Sacks}},\ }\bibfield  {title} {\bibinfo {title} {{U}se of {P}artial
+  {K}nowledge of the {P}otential in the {P}hase {P}roblem of {I}nverse
+  {S}cattering},\ }\href {https://doi.org/10.1006/jcph.1994.1099} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Comp. Phys.}\ }\textbf {\bibinfo {volume}
+  {112}},\ \bibinfo {pages} {273} (\bibinfo {year} {1994})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Waldie}\ \emph {et~al.}(2018)\citenamefont {Waldie},
   \citenamefont {Lind}, \citenamefont {Browning}, \citenamefont {Moulin},
   \citenamefont {Haertlein}, \citenamefont {Forsyth}, \citenamefont {Luchini},
@@ -284,11 +359,13 @@
   {\bibfnamefont {A.}~\bibnamefont {Luchini}}, \bibinfo {author} {\bibfnamefont
   {G.~A.}\ \bibnamefont {Strohmeier}}, \bibinfo {author} {\bibfnamefont
   {H.}~\bibnamefont {Pichler}}, \bibinfo {author} {\bibfnamefont
-  {S.}~\bibnamefont {Maric}}, \ and\ \bibinfo {author} {\bibfnamefont
-  {M.}~\bibnamefont {C\'{a}rdenas}},\ }\href {\doibase
-  10.1021/acs.langmuir.7b02716} {\bibfield  {journal} {\bibinfo  {journal}
-  {Langmuir}\ }\textbf {\bibinfo {volume} {34}},\ \bibinfo {pages} {472}
-  (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+  {S.}~\bibnamefont {Maric}},\ and\ \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {C\'{a}rdenas}},\ }\bibfield  {title} {\bibinfo {title}
+  {{L}ocalization of {C}holesterol within {S}upported {L}ipid {B}ilayers {M}ade
+  of a {N}atural {E}xtract of {T}ailor-{D}euterated {P}hosphatidylcholine},\
+  }\href {https://doi.org/10.1021/acs.langmuir.7b02716} {\bibfield  {journal}
+  {\bibinfo  {journal} {Langmuir}\ }\textbf {\bibinfo {volume} {34}},\ \bibinfo
+  {pages} {472} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Campbell}\ \emph {et~al.}(2018)\citenamefont
   {Campbell}, \citenamefont {Saaka}, \citenamefont {Shao}, \citenamefont
   {Gerelli}, \citenamefont {Cubitt}, \citenamefont {Nazaruk}, \citenamefont
@@ -300,39 +377,46 @@
   {\bibfnamefont {Y.}~\bibnamefont {Gerelli}}, \bibinfo {author} {\bibfnamefont
   {R.}~\bibnamefont {Cubitt}}, \bibinfo {author} {\bibfnamefont
   {E.}~\bibnamefont {Nazaruk}}, \bibinfo {author} {\bibfnamefont
-  {D.}~\bibnamefont {Matyszewska}}, \ and\ \bibinfo {author} {\bibfnamefont
-  {M.~J.}\ \bibnamefont {Lawrence}},\ }\href {\doibase
-  10.1016/j.jcis.2018.07.022} {\bibfield  {journal} {\bibinfo  {journal} {J.
-  Colloid Interface Sci.}\ }\textbf {\bibinfo {volume} {531}},\ \bibinfo
-  {pages} {98} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+  {D.}~\bibnamefont {Matyszewska}},\ and\ \bibinfo {author} {\bibfnamefont
+  {M.~J.}\ \bibnamefont {Lawrence}},\ }\bibfield  {title} {\bibinfo {title}
+  {{S}tructure of surfactant and phospholipid monolayers at the air/water
+  interface modeled from neutron reflectivity data},\ }\href
+  {https://doi.org/10.1016/j.jcis.2018.07.022} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Colloid Interface Sci.}\ }\textbf {\bibinfo {volume} {531}},\
+  \bibinfo {pages} {98} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Schalke}\ and\ \citenamefont
   {L\"{o}sche}(2000)}]{schalke_structural_2000}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Schalke}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {L\"{o}sche}},\ }\href {\doibase 10.1016/S0001-8686(00)00047-6} {\bibfield
-  {journal} {\bibinfo  {journal} {Adv. Colloid Interface Sci.}\ }\textbf
-  {\bibinfo {volume} {88}},\ \bibinfo {pages} {243} (\bibinfo {year}
-  {2000})}\BibitemShut {NoStop}%
+  {L\"{o}sche}},\ }\bibfield  {title} {\bibinfo {title} {{S}tructural models of
+  lipid surface monolayers from x-ray and neutron reflectivity measurements},\
+  }\href {https://doi.org/10.1016/S0001-8686(00)00047-6} {\bibfield  {journal}
+  {\bibinfo  {journal} {Adv. Colloid Interface Sci.}\ }\textbf {\bibinfo
+  {volume} {88}},\ \bibinfo {pages} {243} (\bibinfo {year} {2000})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Heinrich}\ and\ \citenamefont
   {L\"{o}sche}(2014)}]{heinrich_zooming_2014}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
   {Heinrich}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {L\"{o}sche}},\ }\href {\doibase 10.1016/j.bbamem.2014.03.007} {\bibfield
-  {journal} {\bibinfo  {journal} {BBA-Biomembranes}\ }\textbf {\bibinfo
-  {volume} {1838}},\ \bibinfo {pages} {2341} (\bibinfo {year}
+  {L\"{o}sche}},\ }\bibfield  {title} {\bibinfo {title} {{Z}ooming in on
+  disordered systems: {N}eutron reflection studies of proteins associated with
+  fluid membranes},\ }\href {https://doi.org/10.1016/j.bbamem.2014.03.007}
+  {\bibfield  {journal} {\bibinfo  {journal} {BBA-Biomembranes}\ }\textbf
+  {\bibinfo {volume} {1838}},\ \bibinfo {pages} {2341} (\bibinfo {year}
   {2014})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Heinrich}(2016)}]{heinrich_deuteration_2016}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
-  {Heinrich}},\ }in\ \href {\doibase 10.1016/bs.mie.2015.05.019} {\emph
-  {\bibinfo {booktitle} {Isotope Labeling of Biomolecules - Applications}}},\
-  \bibinfo {series} {Methods in Enzymology}, Vol.\ \bibinfo {volume} {566},\
-  \bibinfo {editor} {edited by\ \bibinfo {editor} {\bibfnamefont
-  {Z.}~\bibnamefont {Kelman}}}\ (\bibinfo  {publisher} {Academic Press},\
-  \bibinfo {year} {2016})\ pp.\ \bibinfo {pages} {211--230}\BibitemShut
-  {NoStop}%
+  {Heinrich}},\ }\bibfield  {title} {\bibinfo {title} {{D}euteration in
+  {B}iological {N}eutron {R}eflectometry},\ }in\ \href
+  {https://doi.org/10.1016/bs.mie.2015.05.019} {\emph {\bibinfo {booktitle}
+  {Isotope Labeling of Biomolecules - Applications}}},\ \bibinfo {series}
+  {Methods in Enzymology}, Vol.\ \bibinfo {volume} {566},\ \bibinfo {editor}
+  {edited by\ \bibinfo {editor} {\bibfnamefont {Z.}~\bibnamefont {Kelman}}}\
+  (\bibinfo  {publisher} {Academic Press},\ \bibinfo {year} {2016})\ pp.\
+  \bibinfo {pages} {211--230}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Sun}\ \emph {et~al.}(1994)\citenamefont {Sun},
   \citenamefont {Suter}, \citenamefont {Knewtson}, \citenamefont {Worthington},
   \citenamefont {Tristram-Nagle}, \citenamefont {Zhang},\ and\ \citenamefont
@@ -343,28 +427,31 @@
   \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Knewtson}}, \bibinfo
   {author} {\bibfnamefont {C.~R.}\ \bibnamefont {Worthington}}, \bibinfo
   {author} {\bibfnamefont {S.}~\bibnamefont {Tristram-Nagle}}, \bibinfo
-  {author} {\bibfnamefont {R.}~\bibnamefont {Zhang}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {J.~F.}\ \bibnamefont {Nagle}},\ }\href {\doibase
-  10.1103/PhysRevE.49.4665} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
-  Rev. Lett.}\ }\textbf {\bibinfo {volume} {49}},\ \bibinfo {pages} {4665}
-  (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+  {author} {\bibfnamefont {R.}~\bibnamefont {Zhang}},\ and\ \bibinfo {author}
+  {\bibfnamefont {J.~F.}\ \bibnamefont {Nagle}},\ }\bibfield  {title} {\bibinfo
+  {title} {{O}rder and disorder in fully hydrated unoriented bilayers of
+  gel-phase dipalmitoylphosphatidylcholine},\ }\href
+  {https://doi.org/10.1103/PhysRevE.49.4665} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {49}},\ \bibinfo
+  {pages} {4665} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Armen}\ \emph {et~al.}(1998)\citenamefont {Armen},
   \citenamefont {Uitto},\ and\ \citenamefont
   {Feller}}]{armen_phospholipid_1998}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~S.}\ \bibnamefont
-  {Armen}}, \bibinfo {author} {\bibfnamefont {O.~D.}\ \bibnamefont {Uitto}}, \
+  {Armen}}, \bibinfo {author} {\bibfnamefont {O.~D.}\ \bibnamefont {Uitto}},\
   and\ \bibinfo {author} {\bibfnamefont {S.~E.}\ \bibnamefont {Feller}},\
-  }\href {\doibase 10.1016/S0006-3495(98)77563-0} {\bibfield  {journal}
+  }\bibfield  {title} {\bibinfo {title} {{P}hospholipid {C}omponent {V}olumes:
+  {D}etermination and {A}pplication to {B}ilayer {S}tructure {C}alculations},\
+  }\href {https://doi.org/10.1016/S0006-3495(98)77563-0} {\bibfield  {journal}
   {\bibinfo  {journal} {Biophys. J.}\ }\textbf {\bibinfo {volume} {75}},\
   \bibinfo {pages} {734} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hughes}(2017)}]{hughes_rascal_2017}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
-  {Hughes}},\ }\href@noop {} {\enquote {\bibinfo {title} {Rascal
-  sourceforge},}\ }\bibinfo {howpublished}
-  {\url{https://sourceforge.net/projects/rscl/}} (\bibinfo {year} {2017}),\
-  \bibinfo {note} {accessed: 2019-10-09}\BibitemShut {NoStop}%
+  {Hughes}},\ }\href@noop {} {\bibinfo {title} {Rascal sourceforge}},\ \bibinfo
+  {howpublished} {\url{https://sourceforge.net/projects/rscl/}} (\bibinfo
+  {year} {2017}),\ \bibinfo {note} {accessed: 2019-10-09}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kienzle}\ \emph {et~al.}(2017)\citenamefont
   {Kienzle}, \citenamefont {Maranville}, \citenamefont {O'Donovan},
   \citenamefont {Ankner}, \citenamefont {Berk},\ and\ \citenamefont
@@ -374,24 +461,26 @@
   {Kienzle}}, \bibinfo {author} {\bibfnamefont {B.~B.}\ \bibnamefont
   {Maranville}}, \bibinfo {author} {\bibfnamefont {K.~V.}\ \bibnamefont
   {O'Donovan}}, \bibinfo {author} {\bibfnamefont {J.~F.}\ \bibnamefont
-  {Ankner}}, \bibinfo {author} {\bibfnamefont {N.~K.}\ \bibnamefont {Berk}}, \
+  {Ankner}}, \bibinfo {author} {\bibfnamefont {N.~K.}\ \bibnamefont {Berk}},\
   and\ \bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont {Majkrzak}},\
-  }\href@noop {} {\enquote {\bibinfo {title} {{NCNR} reflectometry software},}\
-  }\bibinfo {howpublished}
-  {\url{https://www.nist.gov/ncnr/reflectometry-software}} (\bibinfo {year}
-  {2017}),\ \bibinfo {note} {accessed: 2019-09-15}\BibitemShut {NoStop}%
+  }\href@noop {} {\bibinfo {title} {{NCNR} reflectometry software}},\ \bibinfo
+  {howpublished} {\url{https://www.nist.gov/ncnr/reflectometry-software}}
+  (\bibinfo {year} {2017}),\ \bibinfo {note} {accessed: 2019-09-15}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Bayes}(1763)}]{bayes_essay_1763}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
-  {Bayes}},\ }\href {\doibase 10.1098/rstl.1763.0053} {\bibfield  {journal}
-  {\bibinfo  {journal} {Phil. Trans. Roy. Soc.}\ }\textbf {\bibinfo {volume}
-  {53}},\ \bibinfo {pages} {370} (\bibinfo {year} {1763})}\BibitemShut
-  {NoStop}%
+  {Bayes}},\ }\bibfield  {title} {\bibinfo {title} {{A}n essay towards solving
+  a {P}roblem in the {D}octrine of {C}hances},\ }\href
+  {https://doi.org/10.1098/rstl.1763.0053} {\bibfield  {journal} {\bibinfo
+  {journal} {Phil. Trans. Roy. Soc.}\ }\textbf {\bibinfo {volume} {53}},\
+  \bibinfo {pages} {370} (\bibinfo {year} {1763})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Lee}\ and\ \citenamefont
   {Ditko}(1962)}]{lee_introducting_1962}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
   {Lee}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Ditko}},\
+  }\bibfield  {title} {\bibinfo {title} {{I}ntroducing {S}piderman},\
   }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Amazing Fantasy
   (Marvel Comics)}\ }\textbf {\bibinfo {volume} {15}} (\bibinfo {year}
   {1962})}\BibitemShut {NoStop}%
@@ -399,20 +488,25 @@
   \citenamefont {Khairy},\ and\ \citenamefont {Howard}}]{mayer_drawing_2010}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Mayer}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Khairy}}, \
-  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Howard}},\ }\href
-  {\doibase 10.1119/1.3254017} {\bibfield  {journal} {\bibinfo  {journal} {Am.
-  J. Phys.}\ }\textbf {\bibinfo {volume} {78}},\ \bibinfo {pages} {648}
-  (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+  {Mayer}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Khairy}},\ and\
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Howard}},\ }\bibfield
+  {title} {\bibinfo {title} {{D}rawing an elephant with four complex
+  parameters},\ }\href {https://doi.org/10.1119/1.3254017} {\bibfield
+  {journal} {\bibinfo  {journal} {Am. J. Phys.}\ }\textbf {\bibinfo {volume}
+  {78}},\ \bibinfo {pages} {648} (\bibinfo {year} {2010})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Sivia}\ \emph {et~al.}(1991)\citenamefont {Sivia},
   \citenamefont {Hamilton},\ and\ \citenamefont {Smith}}]{sivia_analysis_1991}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~S.}\ \bibnamefont
-  {Sivia}}, \bibinfo {author} {\bibfnamefont {W.~A.}\ \bibnamefont {Hamilton}},
-  \ and\ \bibinfo {author} {\bibfnamefont {G.~S.}\ \bibnamefont {Smith}},\
-  }\href {\doibase 10.1016/0921-4526(91)90042-D} {\bibfield  {journal}
-  {\bibinfo  {journal} {Physica B}\ }\textbf {\bibinfo {volume} {173}},\
-  \bibinfo {pages} {121} (\bibinfo {year} {1991})}\BibitemShut {NoStop}%
+  {Sivia}}, \bibinfo {author} {\bibfnamefont {W.~A.}\ \bibnamefont
+  {Hamilton}},\ and\ \bibinfo {author} {\bibfnamefont {G.~S.}\ \bibnamefont
+  {Smith}},\ }\bibfield  {title} {\bibinfo {title} {{A}nalysis of neutron
+  reflectivity data: maximum entropy, bayesian spectral analysis and speckle
+  holography},\ }\href {https://doi.org/10.1016/0921-4526(91)90042-D}
+  {\bibfield  {journal} {\bibinfo  {journal} {Physica B}\ }\textbf {\bibinfo
+  {volume} {173}},\ \bibinfo {pages} {121} (\bibinfo {year}
+  {1991})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Geoghagan}\ \emph {et~al.}(1996)\citenamefont
   {Geoghagan}, \citenamefont {Jones}, \citenamefont {Sivia}, \citenamefont
   {Penfold},\ and\ \citenamefont {Clough}}]{geoghegan_experimental_1996}%
@@ -420,20 +514,38 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Geoghagan}}, \bibinfo {author} {\bibfnamefont {R.~A.~L.}\ \bibnamefont
   {Jones}}, \bibinfo {author} {\bibfnamefont {D.~S.}\ \bibnamefont {Sivia}},
-  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Penfold}}, \ and\
-  \bibinfo {author} {\bibfnamefont {A.~S.}\ \bibnamefont {Clough}},\ }\href
-  {\doibase 10.1103/PhysRevE.53.825} {\bibfield  {journal} {\bibinfo  {journal}
-  {Thin Solid Films}\ }\textbf {\bibinfo {volume} {53}},\ \bibinfo {pages}
-  {825} (\bibinfo {year} {1996})}\BibitemShut {NoStop}%
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Penfold}},\ and\ \bibinfo
+  {author} {\bibfnamefont {A.~S.}\ \bibnamefont {Clough}},\ }\bibfield  {title}
+  {\bibinfo {title} {{E}xperimental study of surface segregation and wetting in
+  films of a partially miscible polymer blend},\ }\href
+  {https://doi.org/10.1103/PhysRevE.53.825} {\bibfield  {journal} {\bibinfo
+  {journal} {Thin Solid Films}\ }\textbf {\bibinfo {volume} {53}},\ \bibinfo
+  {pages} {825} (\bibinfo {year} {1996})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Sivia}\ and\ \citenamefont
   {Webster}(1998)}]{sivia_bayesian_1998}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~S.}\ \bibnamefont
   {Sivia}}\ and\ \bibinfo {author} {\bibfnamefont {J.~R.~P.}\ \bibnamefont
-  {Webster}},\ }\href {\doibase 10.1016/S0921-4526(98)00259-2} {\bibfield
-  {journal} {\bibinfo  {journal} {Physica B}\ }\textbf {\bibinfo {volume}
-  {248}},\ \bibinfo {pages} {327} (\bibinfo {year} {1998})}\BibitemShut
-  {NoStop}%
+  {Webster}},\ }\bibfield  {title} {\bibinfo {title} {{T}he {B}ayesian approach
+  to reflectivity data},\ }\href
+  {https://doi.org/10.1016/S0921-4526(98)00259-2} {\bibfield  {journal}
+  {\bibinfo  {journal} {Physica B}\ }\textbf {\bibinfo {volume} {248}},\
+  \bibinfo {pages} {327} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hughes}\ \emph {et~al.}(2019)\citenamefont {Hughes},
+  \citenamefont {Patel}, \citenamefont {Widmalm}, \citenamefont {Klauda},
+  \citenamefont {Clifton},\ and\ \citenamefont {Im}}]{hughes_physical_2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Hughes}}, \bibinfo {author} {\bibfnamefont {D.~S.}\ \bibnamefont {Patel}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Widmalm}}, \bibinfo
+  {author} {\bibfnamefont {J.~B.}\ \bibnamefont {Klauda}}, \bibinfo {author}
+  {\bibfnamefont {L.~A.}\ \bibnamefont {Clifton}},\ and\ \bibinfo {author}
+  {\bibfnamefont {W.}~\bibnamefont {Im}},\ }\bibfield  {title} {\bibinfo
+  {title} {{P}hysical {P}roperties of {B}acterial {O}uter {M}embrane {M}odels:
+  {N}eutron {R}eflectometry \& {M}olecular {S}imulation},\ }\href
+  {https://doi.org/10.1016/j.bpj.2019.02.001} {\bibfield  {journal} {\bibinfo
+  {journal} {Biophys. J.}\ }\textbf {\bibinfo {volume} {116}},\ \bibinfo
+  {pages} {1095} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
 \bibitem [{Note1()}]{Note1}%
   \BibitemOpen
   \bibinfo {note} {In this work, a reduced notation has been used, where the
@@ -443,23 +555,26 @@
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
   {Pullen}}\ and\ \bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont
-  {Morris}},\ }\href {\doibase 10.1371/journal.pone.0088419} {\bibfield
-  {journal} {\bibinfo  {journal} {PLOS ONE}\ }\textbf {\bibinfo {volume} {9}},\
-  \bibinfo {pages} {e88419} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+  {Morris}},\ }\bibfield  {title} {\bibinfo {title} {{B}ayesian {M}odel
+  {C}omparison and {P}arameter {I}nference in {S}ystems {B}iology {U}sing
+  {N}ested {S}ampling},\ }\href {https://doi.org/10.1371/journal.pone.0088419}
+  {\bibfield  {journal} {\bibinfo  {journal} {PLOS ONE}\ }\textbf {\bibinfo
+  {volume} {9}},\ \bibinfo {pages} {e88419} (\bibinfo {year}
+  {2014})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Skilling}(2006)}]{skilling_nested_2006}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Skilling}},\ }\href {\doibase 10.1063/1.1835238} {\bibfield  {journal}
-  {\bibinfo  {journal} {AIP Conference Proceedings}\ }\textbf {\bibinfo
-  {volume} {735}},\ \bibinfo {pages} {395} (\bibinfo {year}
-  {2006})}\BibitemShut {NoStop}%
+  {Skilling}},\ }\bibfield  {title} {\bibinfo {title} {{N}ested {S}ampling},\
+  }\href {https://doi.org/10.1063/1.1835238} {\bibfield  {journal} {\bibinfo
+  {journal} {AIP Conference Proceedings}\ }\textbf {\bibinfo {volume} {735}},\
+  \bibinfo {pages} {395} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Speagle}(2019)}]{speagle_dynesty_2019}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~S.}\ \bibnamefont
-  {Speagle}},\ }\href@noop {} {\enquote {\bibinfo {title} {dynesty: {A}
-  {D}ynamic {N}ested {S}ampling {P}ackage for {E}stimating {B}ayesian
-  {P}osteriors and {E}vidences},}\ } (\bibinfo {year} {2019}),\ \Eprint
-  {http://arxiv.org/abs/arXiv:1904.02180} {arXiv:1904.02180} \BibitemShut
+  {Speagle}},\ }\href@noop {} {\bibinfo {title} {dynesty: {A} {D}ynamic
+  {N}ested {S}ampling {P}ackage for {E}stimating {B}ayesian {P}osteriors and
+  {E}vidences}} (\bibinfo {year} {2019}),\ \Eprint
+  {https://arxiv.org/abs/arXiv:1904.02180} {arXiv:1904.02180} \BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Sivia}\ and\ \citenamefont
   {Skilling}(2005)}]{sivia_data_2005}%
@@ -477,36 +592,40 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
   {Nelson}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Prescott}},
   \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Hannum}}, \bibinfo
-  {author} {\bibfnamefont {A.~R.}\ \bibnamefont {McCluskey}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {I.}~\bibnamefont {Gresham}},\ }\href {\doibase
-  10.5281/zenodo.3240935} {\enquote {\bibinfo {title} {refnx/refnx v0.1.7},}\ }
-  (\bibinfo {year} {2019})\BibitemShut {NoStop}%
+  {author} {\bibfnamefont {A.~R.}\ \bibnamefont {McCluskey}},\ and\ \bibinfo
+  {author} {\bibfnamefont {I.}~\bibnamefont {Gresham}},\ }\href
+  {https://doi.org/10.5281/zenodo.3240935} {\bibinfo {title} {refnx/refnx
+  v0.1.7}} (\bibinfo {year} {2019})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kass}\ and\ \citenamefont
   {Raftery}(1995)}]{kass_bayes_1995}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~E.}\ \bibnamefont
   {Kass}}\ and\ \bibinfo {author} {\bibfnamefont {A.~E.}\ \bibnamefont
-  {Raftery}},\ }\href {\doibase 10.2307/2291091} {\bibfield  {journal}
-  {\bibinfo  {journal} {J. Am. Stat. Assoc.}\ }\textbf {\bibinfo {volume}
-  {90}},\ \bibinfo {pages} {773} (\bibinfo {year} {1995})}\BibitemShut
-  {NoStop}%
+  {Raftery}},\ }\bibfield  {title} {\bibinfo {title} {{B}ayes {F}actors},\
+  }\href {https://doi.org/10.2307/2291091} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Am. Stat. Assoc.}\ }\textbf {\bibinfo {volume} {90}},\ \bibinfo
+  {pages} {773} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Cornish}\ and\ \citenamefont
   {Littenberg}(2007)}]{cornish_tests_2007}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.~J.}\ \bibnamefont
   {Cornish}}\ and\ \bibinfo {author} {\bibfnamefont {T.~B.}\ \bibnamefont
-  {Littenberg}},\ }\href {\doibase 10.1103/PhysRevD.76.083006} {\bibfield
-  {journal} {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume}
-  {76}},\ \bibinfo {pages} {083006} (\bibinfo {year} {2007})}\BibitemShut
-  {NoStop}%
+  {Littenberg}},\ }\bibfield  {title} {\bibinfo {title} {{T}ests of {B}ayesian
+  model selection techniques for gravitational wave astronomy},\ }\href
+  {https://doi.org/10.1103/PhysRevD.76.083006} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {76}},\ \bibinfo
+  {pages} {083006} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ensign}\ and\ \citenamefont
   {Pande}(2010)}]{ensign_bayesian_2010}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~L.}\ \bibnamefont
   {Ensign}}\ and\ \bibinfo {author} {\bibfnamefont {V.~S.}\ \bibnamefont
-  {Pande}},\ }\href {\doibase 10.1021/jp906786b} {\bibfield  {journal}
-  {\bibinfo  {journal} {J. Phys. Chem. B}\ }\textbf {\bibinfo {volume} {114}},\
-  \bibinfo {pages} {280} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+  {Pande}},\ }\bibfield  {title} {\bibinfo {title} {{B}ayesian {D}etection of
+  {I}ntensity {C}hanges in {S}ingle {M}olecule and {M}olecular {D}ynamics
+  {T}rajectories},\ }\href {https://doi.org/10.1021/jp906786b} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Phys. Chem. B}\ }\textbf {\bibinfo
+  {volume} {114}},\ \bibinfo {pages} {280} (\bibinfo {year}
+  {2010})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hollinshead}\ \emph {et~al.}(2009)\citenamefont
   {Hollinshead}, \citenamefont {Harvey}, \citenamefont {Barlow}, \citenamefont
   {Webster}, \citenamefont {Hughes}, \citenamefont {Weston},\ and\
@@ -517,11 +636,14 @@
   {Harvey}}, \bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont {Barlow}},
   \bibinfo {author} {\bibfnamefont {J.~R.~P.}\ \bibnamefont {Webster}},
   \bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont {Hughes}}, \bibinfo
-  {author} {\bibfnamefont {A.}~\bibnamefont {Weston}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {M.~J.}\ \bibnamefont {Lawrence}},\ }\href {\doibase
-  10.1021/la8028319} {\bibfield  {journal} {\bibinfo  {journal} {Langmuir}\
-  }\textbf {\bibinfo {volume} {25}},\ \bibinfo {pages} {4070} (\bibinfo {year}
-  {2009})}\BibitemShut {NoStop}%
+  {author} {\bibfnamefont {A.}~\bibnamefont {Weston}},\ and\ \bibinfo {author}
+  {\bibfnamefont {M.~J.}\ \bibnamefont {Lawrence}},\ }\bibfield  {title}
+  {\bibinfo {title} {{E}ffects of {S}urface {P}ressure on the {S}tructure of
+  {D}istearoylphosphatidylcholine {M}onolayers {F}ormed at the {A}ir/{W}ater
+  {I}nterface},\ }\href {https://doi.org/10.1021/la8028319} {\bibfield
+  {journal} {\bibinfo  {journal} {Langmuir}\ }\textbf {\bibinfo {volume}
+  {25}},\ \bibinfo {pages} {4070} (\bibinfo {year} {2009})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {McCluskey}\ \emph
   {et~al.}(2019{\natexlab{b}})\citenamefont {McCluskey}, \citenamefont {Grant},
   \citenamefont {Smith}, \citenamefont {Rawle}, \citenamefont {Barlow},
@@ -534,19 +656,24 @@
   {author} {\bibfnamefont {J.~L.}\ \bibnamefont {Rawle}}, \bibinfo {author}
   {\bibfnamefont {D.~J.}\ \bibnamefont {Barlow}}, \bibinfo {author}
   {\bibfnamefont {M.~J.}\ \bibnamefont {Lawrence}}, \bibinfo {author}
-  {\bibfnamefont {S.~C.}\ \bibnamefont {Parker}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {K.~J.}\ \bibnamefont {Edler}},\ }\href {\doibase
-  10.1088/2399-6528/ab12a9} {\bibfield  {journal} {\bibinfo  {journal} {J.
-  Phys. Comm.}\ }\textbf {\bibinfo {volume} {3}},\ \bibinfo {pages} {075001}
-  (\bibinfo {year} {2019}{\natexlab{b}})}\BibitemShut {NoStop}%
+  {\bibfnamefont {S.~C.}\ \bibnamefont {Parker}},\ and\ \bibinfo {author}
+  {\bibfnamefont {K.~J.}\ \bibnamefont {Edler}},\ }\bibfield  {title} {\bibinfo
+  {title} {{A}ssessing molecular simulation for the analysis of lipid monolayer
+  reflectometry},\ }\href {https://doi.org/10.1088/2399-6528/ab12a9} {\bibfield
+   {journal} {\bibinfo  {journal} {J. Phys. Comm.}\ }\textbf {\bibinfo {volume}
+  {3}},\ \bibinfo {pages} {075001} (\bibinfo {year}
+  {2019}{\natexlab{b}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {N\'{e}vot}\ and\ \citenamefont
   {Croce}(1980)}]{nevot_caracterisation_1980}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
   {N\'{e}vot}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Croce}},\ }\href {\doibase 10.1051/rphysap:01980001503076100} {\bibfield
-  {journal} {\bibinfo  {journal} {Rev. Phys. Appl. (Paris)}\ }\textbf {\bibinfo
-  {volume} {15}},\ \bibinfo {pages} {761} (\bibinfo {year} {1980})}\BibitemShut
+  {Croce}},\ }\bibfield  {title} {\bibinfo {title} {{C}aract\'{e}risation des
+  surfaces par r\'{e}flexion rasante de rayons x. application \`{a} l'\'{e}tude
+  du polissage de quelques verres silicates},\ }\href
+  {https://doi.org/10.1051/rphysap:01980001503076100} {\bibfield  {journal}
+  {\bibinfo  {journal} {Rev. Phys. Appl. (Paris)}\ }\textbf {\bibinfo {volume}
+  {15}},\ \bibinfo {pages} {761} (\bibinfo {year} {1980})}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Ku\v{c}erka}\ \emph {et~al.}(2004)\citenamefont
   {Ku\v{c}erka}, \citenamefont {Kiselev},\ and\ \citenamefont
@@ -554,11 +681,14 @@
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
   {Ku\v{c}erka}}, \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
-  {Kiselev}}, \ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Balgav\'{y}}},\ }\href {\doibase 10.1007/s00249-003-0349-0} {\bibfield
-  {journal} {\bibinfo  {journal} {Eur. Biophys. J.}\ }\textbf {\bibinfo
-  {volume} {33}},\ \bibinfo {pages} {328} (\bibinfo {year} {2004})}\BibitemShut
-  {NoStop}%
+  {Kiselev}},\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Balgav\'{y}}},\ }\bibfield  {title} {\bibinfo {title} {{D}etermination of
+  bilayer thickness and lipid surface area in unilamellar
+  dimyristoylphosphatidylcholine vesicles from small-angle neutron scattering
+  curves: a comparison of evaluation methods},\ }\href
+  {https://doi.org/10.1007/s00249-003-0349-0} {\bibfield  {journal} {\bibinfo
+  {journal} {Eur. Biophys. J.}\ }\textbf {\bibinfo {volume} {33}},\ \bibinfo
+  {pages} {328} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Balgav\'{y}}\ \emph {et~al.}(2001)\citenamefont
   {Balgav\'{y}}, \citenamefont {Ku\v{c}erka}, \citenamefont {Gordeliy},\ and\
   \citenamefont {Cherezov}}]{balgavy_evaluation_2001}%
@@ -566,10 +696,13 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
   {Balgav\'{y}}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
   {Ku\v{c}erka}}, \bibinfo {author} {\bibfnamefont {V.~I.}\ \bibnamefont
-  {Gordeliy}}, \ and\ \bibinfo {author} {\bibfnamefont {V.~G.}\ \bibnamefont
-  {Cherezov}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
-  {Acta. Phys. Slovaca}\ }\textbf {\bibinfo {volume} {51}},\ \bibinfo {pages}
-  {53} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+  {Gordeliy}},\ and\ \bibinfo {author} {\bibfnamefont {V.~G.}\ \bibnamefont
+  {Cherezov}},\ }\bibfield  {title} {\bibinfo {title} {{E}valuation of
+  small-angle neutron scattering curves of unilamellar phosphatidylcholine
+  liposomes using a multishell model of bilayer neutron scattering length
+  density},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Acta.
+  Phys. Slovaca}\ }\textbf {\bibinfo {volume} {51}},\ \bibinfo {pages} {53}
+  (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Tanford}(1980)}]{tanford_hydrophobic_1980}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
@@ -587,22 +720,26 @@
   {Braslau}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Deutsch}},
   \bibinfo {author} {\bibfnamefont {P.~S.}\ \bibnamefont {Pershan}}, \bibinfo
   {author} {\bibfnamefont {A.~H.}\ \bibnamefont {Weiss}}, \bibinfo {author}
-  {\bibfnamefont {J.}~\bibnamefont {Als-Nielsen}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {J.}~\bibnamefont {Bohr}},\ }\href {\doibase
-  10.1103/PhysRevLett.54.114} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
-  Rev. Lett.}\ }\textbf {\bibinfo {volume} {54}},\ \bibinfo {pages} {114}
-  (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
+  {\bibfnamefont {J.}~\bibnamefont {Als-Nielsen}},\ and\ \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Bohr}},\ }\bibfield  {title} {\bibinfo
+  {title} {{S}urface {R}oughness of {W}ater {M}easured by {X}-{R}ay
+  {R}eflectivity},\ }\href {https://doi.org/10.1103/PhysRevLett.54.114}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
+  {\bibinfo {volume} {54}},\ \bibinfo {pages} {114} (\bibinfo {year}
+  {1985})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Sinha}\ \emph {et~al.}(1988)\citenamefont {Sinha},
   \citenamefont {Sirota}, \citenamefont {Garoff},\ and\ \citenamefont
   {Stanley}}]{sinha_xray_1988}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~K.}\ \bibnamefont
   {Sinha}}, \bibinfo {author} {\bibfnamefont {E.~B.}\ \bibnamefont {Sirota}},
-  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Garoff}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {H.~B.}\ \bibnamefont {Stanley}},\ }\href {\doibase
-  10.1103/PhysRevB.38.2297} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
-  Rev. B}\ }\textbf {\bibinfo {volume} {38}},\ \bibinfo {pages} {2297}
-  (\bibinfo {year} {1988})}\BibitemShut {NoStop}%
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Garoff}},\ and\ \bibinfo
+  {author} {\bibfnamefont {H.~B.}\ \bibnamefont {Stanley}},\ }\bibfield
+  {title} {\bibinfo {title} {{X}-ray and neutron scattering from rough
+  surfaces},\ }\href {https://doi.org/10.1103/PhysRevB.38.2297} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {38}},\ \bibinfo {pages} {2297} (\bibinfo {year} {1988})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Tikhonov}\ \emph {et~al.}(2000)\citenamefont
   {Tikhonov}, \citenamefont {Mitrinovic}, \citenamefont {Li}, \citenamefont
   {Huang},\ and\ \citenamefont {Schlossman}}]{tikhonov_xray_2000}%
@@ -610,14 +747,16 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
   {Tikhonov}}, \bibinfo {author} {\bibfnamefont {D.~M.}\ \bibnamefont
   {Mitrinovic}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Li}},
-  \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Huang}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {M.~L.}\ \bibnamefont {Schlossman}},\ }\href
-  {\doibase 10.1021/jp001377u} {\bibfield  {journal} {\bibinfo  {journal} {J.
-  Phys. Chem. B}\ }\textbf {\bibinfo {volume} {104}},\ \bibinfo {pages} {6336}
-  (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+  \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Huang}},\ and\ \bibinfo
+  {author} {\bibfnamefont {M.~L.}\ \bibnamefont {Schlossman}},\ }\bibfield
+  {title} {\bibinfo {title} {An {X}-ray {R}eflectivity {S}tudy of the
+  {W}ater-{D}ocosane {I}nterface},\ }\href {https://doi.org/10.1021/jp001377u}
+  {\bibfield  {journal} {\bibinfo  {journal} {J. Phys. Chem. B}\ }\textbf
+  {\bibinfo {volume} {104}},\ \bibinfo {pages} {6336} (\bibinfo {year}
+  {2000})}\BibitemShut {NoStop}%
 \bibitem [{Note2()}]{Note2}%
   \BibitemOpen
-  \bibinfo {note} {These values are tabulated in Table~S1.}\BibitemShut {Stop}%
+  \bibinfo {note} {These values are tabulated in Table S1.}\BibitemShut {Stop}%
 \bibitem [{\citenamefont {Li}\ \emph {et~al.}(1998)\citenamefont {Li},
   \citenamefont {Thirtle}, \citenamefont {Thomas}, \citenamefont {Penfold},
   \citenamefont {Webster},\ and\ \citenamefont {Rennie}}]{li_some_1998}%
@@ -626,11 +765,13 @@
   {Li}}, \bibinfo {author} {\bibfnamefont {P.~N.}\ \bibnamefont {Thirtle}},
   \bibinfo {author} {\bibfnamefont {R.~K.}\ \bibnamefont {Thomas}}, \bibinfo
   {author} {\bibfnamefont {J.}~\bibnamefont {Penfold}}, \bibinfo {author}
-  {\bibfnamefont {J.~R.~P.}\ \bibnamefont {Webster}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {A.~R.}\ \bibnamefont {Rennie}},\ }\href {\doibase
-  10.1016/S0921-4526(98)00227-0} {\bibfield  {journal} {\bibinfo  {journal}
-  {Physica B}\ }\textbf {\bibinfo {volume} {248}},\ \bibinfo {pages} {171}
-  (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
+  {\bibfnamefont {J.~R.~P.}\ \bibnamefont {Webster}},\ and\ \bibinfo {author}
+  {\bibfnamefont {A.~R.}\ \bibnamefont {Rennie}},\ }\bibfield  {title}
+  {\bibinfo {title} {{S}ome improvements and extensions of the application of
+  specular neutron reflection to the study of interfaces},\ }\href
+  {https://doi.org/10.1016/S0921-4526(98)00227-0} {\bibfield  {journal}
+  {\bibinfo  {journal} {Physica B}\ }\textbf {\bibinfo {volume} {248}},\
+  \bibinfo {pages} {171} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {De{Wolf}}\ \emph {et~al.}(1999)\citenamefont
   {De{Wolf}}, \citenamefont {Leporatti}, \citenamefont {Kirsch}, \citenamefont
   {Klinger},\ and\ \citenamefont {Brezesinski}}]{dewolf_phase_1999}%
@@ -638,11 +779,14 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
   {De{Wolf}}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Leporatti}},
   \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Kirsch}}, \bibinfo
-  {author} {\bibfnamefont {R.}~\bibnamefont {Klinger}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {G.}~\bibnamefont {Brezesinski}},\ }\href {\doibase
-  10.1016/S0009-3084(98)00104-2} {\bibfield  {journal} {\bibinfo  {journal}
-  {Chem. Phys. Lipids}\ }\textbf {\bibinfo {volume} {97}},\ \bibinfo {pages}
-  {129} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
+  {author} {\bibfnamefont {R.}~\bibnamefont {Klinger}},\ and\ \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Brezesinski}},\ }\bibfield  {title}
+  {\bibinfo {title} {{P}hase separation in
+  phosphatidylinositol/phosphatidylcholine mixed monolayers},\ }\href
+  {https://doi.org/10.1016/S0009-3084(98)00104-2} {\bibfield  {journal}
+  {\bibinfo  {journal} {Chem. Phys. Lipids}\ }\textbf {\bibinfo {volume}
+  {97}},\ \bibinfo {pages} {129} (\bibinfo {year} {1999})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Brezesinski}\ \emph {et~al.}(2001)\citenamefont
   {Brezesinski}, \citenamefont {M\"{u}ller}, \citenamefont {Toca-Herrera},\
   and\ \citenamefont {Krustev}}]{brezesinski_xray_2001}%
@@ -650,9 +794,11 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
   {Brezesinski}}, \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont
   {M\"{u}ller}}, \bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont
-  {Toca-Herrera}}, \ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Krustev}},\ }\href {\doibase 10.1016/S0009-3084(01)00135-9} {\bibfield
-  {journal} {\bibinfo  {journal} {Chem. Phys. Lipids}\ }\textbf {\bibinfo
+  {Toca-Herrera}},\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Krustev}},\ }\bibfield  {title} {\bibinfo {title} {{X}-ray diffraction and
+  foam film investigations of {PC} head group interaction in water/ethanol
+  mixtures},\ }\href {https://doi.org/10.1016/S0009-3084(01)00135-9} {\bibfield
+   {journal} {\bibinfo  {journal} {Chem. Phys. Lipids}\ }\textbf {\bibinfo
   {volume} {110}},\ \bibinfo {pages} {183} (\bibinfo {year}
   {2001})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Struth}\ \emph {et~al.}(2001)\citenamefont {Struth},
@@ -664,20 +810,23 @@
   {Struth}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Rieutord}},
   \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Konovalov}}, \bibinfo
   {author} {\bibfnamefont {G.}~\bibnamefont {Brezesinski}}, \bibinfo {author}
-  {\bibfnamefont {G.}~\bibnamefont {Gr\"{u}bel}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {P.}~\bibnamefont {Terech}},\ }\href {\doibase
-  10.1103/PhysRevLett.88.025502} {\bibfield  {journal} {\bibinfo  {journal}
-  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {88}},\ \bibinfo {pages}
-  {025502} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+  {\bibfnamefont {G.}~\bibnamefont {Gr\"{u}bel}},\ and\ \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Terech}},\ }\bibfield  {title} {\bibinfo
+  {title} {{O}rganization of {T}wo-{D}imensional {P}hospholipid {M}onolayers on
+  a {G}el-{F}orming {S}ubstrate},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.88.025502} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {88}},\
+  \bibinfo {pages} {025502} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Sivia}\ \emph {et~al.}(1993)\citenamefont {Sivia},
   \citenamefont {David}, \citenamefont {Knight},\ and\ \citenamefont
   {Gull}}]{sivia_introduction_1993}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~S.}\ \bibnamefont
   {Sivia}}, \bibinfo {author} {\bibfnamefont {W.~I.~F.}\ \bibnamefont {David}},
-  \bibinfo {author} {\bibfnamefont {K.~S.}\ \bibnamefont {Knight}}, \ and\
-  \bibinfo {author} {\bibfnamefont {S.~F.}\ \bibnamefont {Gull}},\ }\href
-  {\doibase 10.1016/0167-2789(93)90241-R} {\bibfield  {journal} {\bibinfo
-  {journal} {Physica D}\ }\textbf {\bibinfo {volume} {66}},\ \bibinfo {pages}
-  {234} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+  \bibinfo {author} {\bibfnamefont {K.~S.}\ \bibnamefont {Knight}},\ and\
+  \bibinfo {author} {\bibfnamefont {S.~F.}\ \bibnamefont {Gull}},\ }\bibfield
+  {title} {\bibinfo {title} {{A}n introduction to bayesian model selection},\
+  }\href {https://doi.org/10.1016/0167-2789(93)90241-R} {\bibfield  {journal}
+  {\bibinfo  {journal} {Physica D}\ }\textbf {\bibinfo {volume} {66}},\
+  \bibinfo {pages} {234} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
 \end{thebibliography}%

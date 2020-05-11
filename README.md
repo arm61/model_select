@@ -27,13 +27,13 @@ Requirements:
 - anaconda or miniconda python
 - [REVTeX](https://journals.aps.org/revtex)
 
-The supplied Snakefile, will reproduce all of the analysis, plot the figures, and build a preprint version of the paper (`paper/paper.pdf`) when run.
+The supplied Snakefile, will reproduce all of the analysis, plot the figures, and build a [preprint version of the paper](./paper/paper.pdf) when run.
 Be aware that the analyses within this work are non-trivial and take many hours to run so **use caution** before re-running.
 
 To re-run all analysis, simply run the following commands:
 
 ```
-conda env create --prefix ./model_select --file enviroment.yml
+conda env create --prefix ./model_select --file environment.yml
 
 source activate ./model_select
 
@@ -46,7 +46,7 @@ The [`Snakefile`](./Snakefile) outlines the process of this reproducible analysi
 
 ## [Figures](./paper)
 
-PDF versions of the figures, can be found in the [`paper`](./paper) directory.--->
+PDF versions of the figures, can be found in the [`paper`](./paper) directory.
 
 ## Acknowledgements
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.3)  30 APR 2020 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.3)  1 MAY 2020 08:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -669,13 +669,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/usr/local/texlive/2019basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 ] [2]
-Underfull \hbox (badness 1708) in paragraph at lines 177--203
+Underfull \hbox (badness 1708) in paragraph at lines 178--204
 \OT1/cmr/m/it/10 et al. \OT1/cmr/m/n/10 [[]] and sub-se-quently re-analysed by 
 Mc-
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 177--203
+Underfull \hbox (badness 1436) in paragraph at lines 178--204
 \OT1/cmr/m/n/10 Cluskey \OT1/cmr/m/it/10 et al. \OT1/cmr/m/n/10 [[]]. The mea-s
 ure-ments con-cern
  []
@@ -684,23 +684,23 @@ ure-ments con-cern
 <iterations.pdf, id=35, 631.40114pt x 355.97227pt>
 File: iterations.pdf Graphic file (type pdf)
 <use iterations.pdf>
-Package pdftex.def Info: iterations.pdf  used on input line 281.
+Package pdftex.def Info: iterations.pdf  used on input line 282.
 (pdftex.def)             Requested size: 203.99689pt x 115.01065pt.
  (./th_mvh_tt_phit_mvt_rough_ev.txt)
 <post_all.pdf, id=36, 979.13098pt x 979.13098pt>
 File: post_all.pdf Graphic file (type pdf)
 <use post_all.pdf>
-Package pdftex.def Info: post_all.pdf  used on input line 292.
+Package pdftex.def Info: post_all.pdf  used on input line 293.
 (pdftex.def)             Requested size: 229.49844pt x 229.4982pt.
  [4 <./iterations.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 303.
+ on input line 304.
 
 <evidence.pdf, id=70, 1471.5399pt x 516.82796pt>
 File: evidence.pdf Graphic file (type pdf)
 <use evidence.pdf>
-Package pdftex.def Info: evidence.pdf  used on input line 310.
+Package pdftex.def Info: evidence.pdf  used on input line 311.
 (pdftex.def)             Requested size: 510.0pt x 179.1181pt.
 (./best_label.txt) (./best_ev.txt) (./next_best_label.txt) (./next_best_ev.txt)
 (./diff_ev.txt) (./best_label.txt) (./next_best_label.txt) (./best_label.txt)
@@ -708,17 +708,17 @@ Package pdftex.def Info: evidence.pdf  used on input line 310.
 <post_best.pdf, id=71, 675.59695pt x 675.59695pt>
 File: post_best.pdf Graphic file (type pdf)
 <use post_best.pdf>
-Package pdftex.def Info: post_best.pdf  used on input line 322.
+Package pdftex.def Info: post_best.pdf  used on input line 323.
 (pdftex.def)             Requested size: 229.49844pt x 229.49374pt.
  (./best_label.txt) (./best_label.txt) (./d_h_range.txt)
 (./V_h_range.txt) (./d_t_range.txt) (./V_t_range.txt)
 <refl.pdf, id=72, 642.12498pt x 901.91153pt>
 File: refl.pdf Graphic file (type pdf)
 <use refl.pdf>
-Package pdftex.def Info: refl.pdf  used on input line 350.
+Package pdftex.def Info: refl.pdf  used on input line 351.
 (pdftex.def)             Requested size: 203.99689pt x 286.52576pt.
 
-Underfull \hbox (badness 1092) in paragraph at lines 359--362
+Underfull \hbox (badness 1092) in paragraph at lines 360--363
 []\OT1/cmr/m/n/10 As men-tioned above, this par-tic-u-lar ex-per-i-men-tal
  []
 
@@ -726,7 +726,7 @@ Underfull \hbox (badness 1092) in paragraph at lines 359--362
 <best_per.pdf, id=92, 638.97491pt x 516.82796pt>
 File: best_per.pdf Graphic file (type pdf)
 <use best_per.pdf>
-Package pdftex.def Info: best_per.pdf  used on input line 374.
+Package pdftex.def Info: best_per.pdf  used on input line 375.
 (pdftex.def)             Requested size: 203.99689pt x 164.99402pt.
  (./tt_ev.txt) (./tt_ev.txt) [6 <./evidence.pdf> <./post_best.pdf
 
@@ -739,10 +739,10 @@ age group included in a single page
 >]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 382.
+ on input line 383.
 
 (./best_label.txt) (./best_ev.txt) (./next_best_ev.txt) (./best_label.txt)
-Underfull \hbox (badness 1946) in paragraph at lines 408--409
+Underfull \hbox (badness 1946) in paragraph at lines 409--410
 []\OT1/cmr/m/n/10 A.R.M. pro-posed, im-ple-mented, and ap-plied the
  []
 
@@ -846,7 +846,7 @@ pe1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2019basic/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2019basic/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019basic/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on paper.pdf (9 pages, 933825 bytes).
+Output written on paper.pdf (9 pages, 933814 bytes).
 PDF statistics:
  259 PDF objects out of 1000 (max. 8388607)
  208 compressed objects within 3 object streams

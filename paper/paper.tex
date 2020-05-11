@@ -3,7 +3,7 @@
  superscriptaddress,
  amsmath,amssymb,
  aps,
-]{revtex4-2}
+]{revtex4-1}
 
 \usepackage{graphicx}
 \usepackage{dcolumn}
@@ -284,7 +284,7 @@ Figure~\ref{fig:iterations} shows the variation of the estimated evidence as a f
 \end{figure}
 %
 This plot shows clearly the ability for the nested sampling method to determine a good estimate of the evidence, with the plot plateauing at \input{th_mvh_tt_phit_mvt_rough_ev.txt}\unskip\;after more than \num{10000} samples.
-This was the slowest model to converge, as it was sampling the high-dimensionality parameter space, on a workstation computer this nested sampling process took around \SI{20}{\minute} to coverage leading to the results provided here.
+This was the slowest model to converge, as it was sampling the high-dimensionality parameter space, on a workstation computer this nested sampling process took around \SI{20}{\minute} to converge leading to the results provided here.
 
 In addition to the ability for the nested sampling method to determine the evidence for a given model, it also allows for the posterior probabilities of the analysis to be evaluated. 
 Figure~\ref{fig:post} gives the posterior probabilities and cross-correlations between each of the six parameters. 

@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3697795.svg)](https://doi.org/10.5281/zenodo.3697795) [![arXiv](https://img.shields.io/badge/arXiv-1910.10581-orange.svg)](https://arxiv.org/abs/1910.10581) [![License](https://img.shields.io/github/license/arm61/model_select.svg?color=lightgrey)](https://github.com/arm61/model_select/blob/master/LICENSE)
 
-[Andrew R. McCluskey](https://orcid.org/0000-0003-3381-5911)&ast;, [Thomas Arnold](https://orcid.org/0000-0001-7196-7831), Joshaniel F. K. Cooper, and [Tim Snow](https://orcid.org/0000-0001-7146-6885)
+[Andrew R. McCluskey](https://orcid.org/0000-0003-3381-5911)&ast;, Joshaniel F. K. Cooper, [Thomas Arnold](https://orcid.org/0000-0001-7196-7831), and [Tim Snow](https://orcid.org/0000-0001-7146-6885)
 
 &ast;[andrew.mccluskey@diamond.ac.uk](mailto:andrew.mccluskey@diamond.ac.uk)/[a.r.mccluskey@bath.ac.uk](mailto:a.r.mccluskey@bath.ac.uk)
 
